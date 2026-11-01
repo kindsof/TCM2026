@@ -6,10 +6,11 @@
 ## 摘要
 
 1. **发在哪里**：中西医结合没有唯一“对口刊”。按稿件类型分流：临床/循证投 *Chinese Journal of Integrative Medicine*、*Journal of Integrative Medicine*；中药药理与机制投 *Phytomedicine*、*Journal of Ethnopharmacology*、*Chinese Medicine*；针灸投 *Acupuncture in Medicine*；中文临床与共识投《中国中西医结合杂志》《中医杂志》。本文给出 11 本英文刊 + 4 本中文核心刊的对比表，以及 2021–2025 年各刊 PubMed 年发文量。
-2. **经典论文**：已下载 **11 篇开放获取（CC BY）论文**，覆盖临床证据、诊疗指南、WHO 政策、网络药理学与中药数据库五类，均附 DOI、被引次数与本地 PDF。受版权限制，中文经典多需通过 CNKI/万方机构订阅获取，本文只给线索、不提供下载。
+2. **经典论文**：已下载 **14 篇开放获取（CC BY）论文**，覆盖临床证据、诊疗指南、WHO 政策、网络药理学与中药数据库、AI 五类，均附 DOI、被引次数与本地 PDF。受版权限制，中文经典多需通过 CNKI/万方机构订阅获取，本文只给线索、不提供下载。
 3. **数量走向**：2000–2025 年 PubMed 中，中医药相关论文由 296 篇增至 8,107 篇（27.4 倍），结合医学（integrative medicine）由 10 篇增至 643 篇（64.3 倍），针灸由 328 篇增至 3,108 篇（9.5 倍）。2020 年因 COVID-19 出现一次跳升，2023 年后再次提速（2023→2025 中医药 +41.7%）。
 4. **期刊结构**：核心“结合医学”期刊的年发文量并未随领域扩张，反而在 2016 年后账面下降——其中相当一部分是《中国中西医结合杂志》2018 年起不再被 PubMed 收录造成的统计假象；剔除该刊后，CJIM/JIM/IMR 合计从 2016 年 385 篇到 2025 年 373 篇，基本持平。真正的增量流向 *Phytomedicine*（566→1,498 篇/年）与 *Journal of Ethnopharmacology*（1,513→2,140 篇/年）等中药药理刊。
 5. **题目走向**：标题从“临床观察/经验总结/化学成分测定”转向“网络药理学、分子对接、肠道菌群、系统评价/Meta 分析、机器学习”。标题平均词数由 10.2 增至 13.6，含冒号的“主标题：副标题”结构由 12.5% 升至 47.1%。机制类词汇（mechanism）占比由 1.7% 升至 12.0%；网络药理学在 2023 年达到 9.7% 的峰值后回落至 2025 年的 3.1%，显示该方法已过扩张期。
+6. **AI 维度**：2025 年 AI 相关中医药论文 429 篇，占中医药论文的 5.3%（2000 年不足 0.4%）；研究从机器学习辅助诊断，转向深度学习/知识图谱，2023 年后大语言模型（LLM）爆发（2025 年 32 篇）。详见第四章。
 
 ---
 
@@ -106,7 +107,7 @@
 ### 2.1 选文标准
 
 - **可公开获取**：全部为 CC BY 等开放许可，PDF 直接来自出版社，未使用任何绕过付费墙的方式；
-- **代表性**：覆盖临床证据（COVID-19、肿瘤）、诊疗规范（膝骨关节炎中西医结合指南）、全球政策（WHO 传统医学战略）、方法学（网络药理学、中药数据库）；
+- **代表性**：覆盖临床证据（COVID-19、肿瘤）、诊疗规范（膝骨关节炎中西医结合指南）、全球政策（WHO 传统医学战略）、方法学（网络药理学、中药数据库）与 AI（产业、临床、多组学）；
 - **影响力**：优先选择高被引或领域里程碑文献（被引数为 OpenAlex 2026-11 数据）。
 
 ### 2.2 清单
@@ -124,14 +125,17 @@
 | 09 | 方法学：网络靶标与复方协同 | Network target for screening synergistic drug combinations with application to traditional Chinese medicine | *BMC Syst Biol* 2011 | 381 | [PDF](papers/09_network-target-synergy_BMCSystBiol_2011.pdf) |
 | 10 | 方法学：中药系统药理学 | Systems Pharmacology for Investigation of the Mechanisms of Action of Traditional Chinese Medicine in Drug Discovery | *Front Pharmacol* 2019 | 244 | [PDF](papers/10_systems-pharmacology-TCM_FrontPharmacol_2019.pdf) |
 | 11 | 方法学：网络药理学研究范式（2025 综述） | Network pharmacology: a crucial approach in traditional Chinese medicine research | *Chin Med* 2025 | 281 | [PDF](papers/11_network-pharmacology-review_ChinMed_2025.pdf) |
+| 12 | AI：中药产业现代化 | Integrating artificial intelligence into the modernization of traditional Chinese medicine industry: a review | *Front Pharmacol* 2024 | 81 | [PDF](papers/12_AI-TCM-industry_FrontPharmacol_2024.pdf) |
+| 13 | AI：中医师视角的机遇与挑战 | Opportunities and challenges of traditional Chinese medicine doctors in the era of artificial intelligence | *Front Med* 2024 | 41 | [PDF](papers/13_AI-TCM-clinicians_FrontMed_2024.pdf) |
+| 14 | AI：中药多组学与多靶点 | Artificial intelligence in traditional Chinese medicine: advances in multi-metabolite multi-target interaction modeling | *Front Pharmacol* 2025 | 41 | [PDF](papers/14_AI-TCM-multiomics_FrontPharmacol_2025.pdf) |
 
 完整元数据（作者、卷期、页码、许可）见 [`papers/index.csv`](papers/index.csv)，下载脚本见 [`scripts/download_papers.py`](scripts/download_papers.py)。
 
-### 2.3 怎么读这 11 篇
+### 2.3 怎么读这 14 篇
 
 - **先读 01、02、03**：理解“中西医结合临床研究”能回答什么问题、常见设计缺陷是什么；
 - **再读 06、09、10、11**：网络药理学/系统药理学的标准套路、常用数据库与常见过度解读；
-- **05 用于写引言与政策背景**；**07、08 用于找数据库与工具**；
+- **05 用于写引言与政策背景**；**07、08 用于找数据库与工具**；**12–14 用于 AI 方向**（产业、临床医生视角、多组学方法）；
 - 读的时候重点看：纳入排除标准、对照设置、结局指标、机制证据链是否闭合。
 
 ### 2.4 中文经典的获取
@@ -218,7 +222,7 @@
 
 1. **从“观察”到“证据”**：标题中含 randomized controlled 的比例由 0.7% 升至 3.0%，Meta/系统评价由 0.7% 升至 4.9%（2020 年峰值 10.2%）。RCT 与系统评价已成为常规语言，而不是少数团队的标签。
 2. **机制研究成为主流叙事**：mechanism 占比由 1.7% 升至 12.0%；network pharmacology 从 0 升至 2023 年的 9.7%，但 2025 年回落到 3.1%，分子对接（molecular docking）仍在上升。一个可能的解释是网络药理学从“新方法”变成“标配”，单独作为卖点已不够，标题更强调具体机制或验证。
-3. **新技术词快速进入**：肠道菌群（0→2.9%）、机器学习/AI（0→3.4%）、网络 Meta 分析（0→约 1.6%）是 2021–2025 年最明显的增量词。
+3. **新技术词快速进入**：肠道菌群（0→2.9%）、机器学习/AI（0→3.4%）、网络 Meta 分析（0→约 1.6%）是 2021–2025 年最明显的增量词（AI 相关论文的专门分析见第四章）。
 4. **标题更“国际期刊化”**：平均词数 10.2→13.6，含冒号的“主标题：副标题”结构 12.5%→47.1%，含问号的标题长期在 3% 以下（2000 年约 3%）。标题信息量更大、结构更规范，也意味着“一句话讲清结论”的难度更高。
 5. **传统术语相对退潮**：yin yang、blood stasis、english translation、HPLC/MS 化学成分测定等词组的相对份额下降。这不是这些研究消失，而是它们让位于机制、循证与数据驱动叙事；纯化学表征类论文需要更强的功能/临床出口才能进入高影响力期刊。
 
@@ -228,6 +232,127 @@
 - **机制方向**：网络药理学 + 分子对接的“纯预测”稿件越来越难发；能加实验验证（细胞/类器官/动物）或临床样本的稿件更受欢迎。
 - **方法学方向**：真实世界研究、因果推断（孟德尔随机化等）、患者报告结局、AI 辅助辨证，是标题层面仍在上升的赛道。
 - **中文作者**：如果目标是国内评价体系，优先《中国中西医结合杂志》；如果目标是国际可见度，注意“结合医学”综合刊容量有限，可考虑中药药理刊或 OA 综合刊，但需评估 APC 与预警风险。
+
+---
+
+## 四、AI 与中西医结合研究：一个正在成形的维度
+
+### 4.1 为什么单列 AI
+
+AI 在这个领域同时扮演两个角色：一是**研究对象**——用机器学习、深度学习、知识图谱、大语言模型（LLM）处理舌象、脉象、光谱、影像、处方和文献；二是**研究工具**——辅助文献筛选、数据清洗、统计建模、图像判读与英文写作。前者已经形成可计量的论文群，后者正在改变论文的生产方式。把 AI 单列，是为了回答两个问题：AI 相关论文在这个领域占多大比重、长什么样；AI 作为工具又给选题、写作和评价带来了什么。
+
+### 4.2 数量：从边缘话题到 5% 的份额
+
+![AI 相关中医药论文的数量与占比](figures/fig6_ai_trend.svg)
+
+| 年份 | AI 相关论文 | 占中医药论文比例 |
+|---:|---:|---:|
+| 2000 | 1 | 0.3% |
+| 2005 | 4 | 0.5% |
+| 2010 | 13 | 0.8% |
+| 2015 | 23 | 0.8% |
+| 2020 | 96 | 1.9% |
+| 2023 | 121 | 2.1% |
+| 2024 | 218 | 3.2% |
+| 2025 | 429 | 5.3% |
+
+- 2000–2025 年累计 1,449 篇；PubMed 全库检索为 1,718 篇，差额为出版年不在 2000–2025 的记录（如 2026 年在线发表）。
+- 2020 年突破 1%，2024 年突破 3%，2025 年达到 5.3%；2025 年单年 429 篇，约为 2020 年的 4.5 倍。
+- 三个阶段：2000–2015 年以机器学习辅助证候、舌脉与谱图分析为主，每年不足 30 篇；2016–2022 年深度学习与影像组学带动，年发文由 30 篇增至 139 篇；2023 年后 LLM 与生成式 AI 接棒，2024、2025 年连续接近翻倍。
+
+### 4.3 主题结构：诊断客观化、药物发现、知识工程
+
+![AI + 中医药研究的主题分布](figures/fig7_ai_subtopics.svg)
+
+| 主题 | 2000–2025 | 其中 2025 |
+|---|---:|---:|
+| 机器学习 | 659 | 210 |
+| 神经网络 | 349 | 68 |
+| 深度学习 | 288 | 77 |
+| 证候/辨证 | 111 | 29 |
+| 舌诊 | 87 | 16 |
+| 大语言模型 / ChatGPT | 76 | 32 |
+| 药物发现 | 70 | 25 |
+| 数据挖掘 | 54 | 13 |
+| 知识图谱 | 37 | 7 |
+| 脉诊 | 35 | 7 |
+| 医学影像 / 影像组学 | 32 | 11 |
+
+> 同一论文可命中多个主题，各行不能相加为总数。
+
+三条主线：
+
+1. **诊断客观化**：舌象、脉象、光谱、影像。舌诊 87 篇、脉诊 35 篇、影像/影像组学 32 篇；光谱类工作多发表在分析化学刊（如 *Spectrochimica Acta Part A*），说明“AI + 光谱/色谱”是中药质量与舌象研究的一个交叉出口。
+2. **药物发现与机制**：网络药理学、分子对接、多组学。AI 语料中 network pharmacology 出现 93 次、molecular docking 28 次，仅次于 machine learning（169 次）；AI 正在把“网络药理学”从静态网络分析推向预测与优化。
+3. **知识工程与 LLM**：知识图谱、问答、处方生成、辨证评测。LLM 相关 76 篇，其中 32 篇发表于 2025 年；已出现 TCMChat、Lingdan、XuanHuGPT、BianCang、TCM-KLLaMA 等命名模型，以及“LLM 在中医/结合医学中的综述与基准评测”。
+
+### 4.4 发表在哪里
+
+2021–2025 年 AI + 中医药论文的期刊分布（按 PubMed 标题记录统计，前 15）：
+
+| 期刊 | 论文数 | 类型 |
+|---|---:|---|
+| 中国中药杂志 | 48 | 中药综合 |
+| Frontiers in Pharmacology | 41 | 药理/综合 OA |
+| Chinese Medicine | 31 | 中药综合 OA |
+| Scientific Reports | 28 | 综合 OA |
+| Phytomedicine | 25 | 植物药 |
+| Journal of Ethnopharmacology | 22 | 民族药/药理 |
+| Spectrochimica Acta Part A | 21 | 光谱/分析化学 |
+| Frontiers in Medicine | 20 | 综合医学 |
+| Evidence-Based Complementary and Alternative Medicine | 20 | 补充替代医学 |
+| Medicine (Baltimore) | 20 | 综合医学 |
+| Computers in Biology and Medicine | 16 | 医学信息学 |
+| Heliyon | 15 | 综合 OA |
+| JMIR Medical Informatics | 14 | 医学信息学 |
+| PLOS ONE | 14 | 综合 OA |
+| Chinese Journal of Integrative Medicine | 13 | 中西医结合 |
+
+解读：
+
+- **中药/植物药刊是主阵地**（中国中药杂志、Frontiers in Pharmacology、Chinese Medicine、Phytomedicine、Journal of Ethnopharmacology），适合“AI + 中药质量/机制/网络药理学”；
+- **方法与信息学刊**（Computers in Biology and Medicine、JMIR Medical Informatics）承接模型、系统与评测类工作；
+- **光谱/分析化学刊**承接舌象、光谱、色谱与 AI 结合的工作；
+- 综合 OA 刊（Scientific Reports、Heliyon、Medicine、PLOS ONE）数量大、周期快，但需更注意创新性与预警风险。
+
+### 4.5 AI 对论文生产与评价的影响
+
+**对生产端**：
+
+- 文献综述：LLM 可用于初筛与信息抽取，但必须人工复核，避免“幻觉引用”；
+- 数据分析：自动化建模、图像分割、组学整合降低了技术门槛，也让“方法堆叠”更容易；
+- 写作与翻译：AI 润色可提升语言，但期刊普遍要求声明 AI 使用范围，AI 不能署名（ICMJE 立场）。
+
+**对研究范式**：
+
+- 从“单指标/单模型”转向“多组学 + 网络 + AI”；
+- 从“回顾性小样本”转向“外部验证、前瞻性、真实世界数据”；
+- 从“论文里的方法”转向“可复用的模型/数据库/基准”（如中药数据库、LLM 评测集）。
+
+**风险与规范**：
+
+- 数据泄漏、过拟合、缺乏外部验证，是 AI 医学论文最常见的硬伤；
+- 报告规范：预测模型用 TRIPOD+AI，AI 干预 RCT 用 CONSORT-AI，早期临床评估用 DECIDE-AI，影像 AI 用 CLAIM，诊断准确性用 STARD-AI，偏倚风险用 PROBAST；
+- 代码、数据、提示词（prompt）与模型版本的可用性声明，正在成为审稿人的必查项；
+- 伦理与隐私：涉及患者数据、舌象/面部图像时需伦理批件与脱敏说明。
+
+### 4.6 给作者的选题建议
+
+| 方向 | 值得做 | 谨慎做 |
+|---|---|---|
+| 临床 AI | 有外部验证的舌诊/脉诊/影像模型；与临床结局挂钩 | 单中心小样本、无外部测试集 |
+| LLM | 中医知识问答/辨证的基准评测、安全性与指南依从性 | 只展示对话截图、无量化评价 |
+| 中药 AI | AI + 网络药理学 + 实验验证；多组学整合 | 纯预测、无实验或临床出口 |
+| 数据与工具 | 可复用的数据库、知识图谱、开源模型 | 不可复现的“黑箱”流程 |
+
+选刊：方法学创新优先信息学刊（*Computers in Biology and Medicine*、*JMIR Medical Informatics*）；中药 AI 优先 *Chinese Medicine*、*Phytomedicine*、*Journal of Ethnopharmacology*、中国中药杂志；临床 AI 优先 CJIM、JIM、*Frontiers in Medicine*。
+
+### 4.7 局限
+
+- 检索式只覆盖标题/摘要/MeSH 明确出现 AI 术语的论文，用 AI 但未在标题摘要标注的研究会漏计；“AI”缩写未纳入检索以避免噪声。
+- 主题标签可重叠，不能相加为总数。
+- 期刊分布基于 PubMed 标题记录，未覆盖中文非 PubMed 期刊的完整 AI 发文。
+- 2025 年数据完整，但在线优先发表可能造成跨年归属差异。
 
 ---
 
@@ -249,12 +374,16 @@
 | `data/title_terms_tcm.csv`、`data/title_style_tcm.csv` | 标题词频与形式指标 |
 | `data/rising_terms.csv`、`data/top_terms_by_period.csv` | 升降词组与分时期高频词组 |
 | `data/journal_counts_2021_2025.csv` | 候选期刊 2021–2025 年 PubMed 发文量 |
-| `figures/fig1`–`fig5` | 报告用 SVG 图 |
-| `papers/*.pdf`、`papers/index.csv` | 11 篇开放获取论文与元数据 |
+| `data/ai_counts.csv`、`data/ai_share.csv` | AI+中医药论文逐年计数与占比 |
+| `data/ai_subtopics.csv`、`data/ai_top_journals.csv`、`data/ai_title_terms.csv` | AI 主题、期刊与标题词组 |
+| `data/titles_ai.csv` | AI+中医药标题全量（1,449 条） |
+| `figures/fig1`–`fig7` | 报告用 SVG 图（fig6–fig7 为 AI 章节） |
+| `papers/*.pdf`、`papers/index.csv` | 14 篇开放获取论文与元数据 |
 | `scripts/collect_pubmed.py` | PubMed 计数与标题采集 |
 | `scripts/collect_journals.py` | 期刊发文量采集 |
 | `scripts/analyze_pubmed.py` | 统计与 SVG 绘图 |
 | `scripts/download_papers.py` | 论文下载与 Crossref 元数据 |
+| `scripts/collect_ai.py`、`scripts/analyze_ai.py` | AI 章节数据采集与分析 |
 
 ## 附录 C：复现
 
@@ -262,6 +391,8 @@
 python3 scripts/collect_pubmed.py     # 需要联网访问 NCBI，约 15–25 分钟
 python3 scripts/collect_journals.py   # 期刊发文量
 python3 scripts/analyze_pubmed.py     # 生成 data/*.csv 与 figures/*.svg
+python3 scripts/collect_ai.py         # AI+中医药计数、主题与标题
+python3 scripts/analyze_ai.py         # 生成 AI 章节图表
 python3 scripts/download_papers.py    # 下载 papers/*.pdf
 ```
 
