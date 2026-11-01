@@ -1,0 +1,68 @@
+[
+  {
+    "file": "01_TCM-COVID19_IntJBiolSci_2020.pdf",
+    "doi": "10.7150/ijbs.45538",
+    "url": "https://www.ijbs.com/v16p1708.pdf",
+    "theme": "临床证据：中医药治疗 COVID-19"
+  },
+  {
+    "file": "02_TCM-cancer-care_PLoSOne_2013.pdf",
+    "doi": "10.1371/journal.pone.0060338",
+    "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0060338&type=printable",
+    "theme": "临床证据：中医药肿瘤治疗（中文文献系统评价）"
+  },
+  {
+    "file": "03_TCM-neck-lowback-pain_PLoSOne_2015.pdf",
+    "doi": "10.1371/journal.pone.0117146",
+    "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0117146&type=printable",
+    "theme": "临床证据：中医药治疗颈腰痛系统评价"
+  },
+  {
+    "file": "04_integrative-knee-OA-guideline_FrontMed_2023.pdf",
+    "doi": "10.3389/fmed.2023.1260943",
+    "url": "https://www.frontiersin.org/articles/10.3389/fmed.2023.1260943/pdf",
+    "theme": "临床规范：膝骨关节炎中西医结合诊疗指南"
+  },
+  {
+    "file": "05_WHO-TCIM-strategy-review_FrontMed_2024.pdf",
+    "doi": "10.3389/fmed.2024.1395698",
+    "url": "https://www.frontiersin.org/articles/10.3389/fmed.2024.1395698/pdf",
+    "theme": "政策与全球治理：WHO 传统医学战略评述"
+  },
+  {
+    "file": "06_network-pharmacology-databases_FrontPharmacol_2019.pdf",
+    "doi": "10.3389/fphar.2019.00123",
+    "url": "https://www.frontiersin.org/articles/10.3389/fphar.2019.00123/pdf",
+    "theme": "方法学：中药网络药理学数据库综述"
+  },
+  {
+    "file": "07_BATMAN-TCM_SciRep_2016.pdf",
+    "doi": "10.1038/srep21146",
+    "url": "https://www.nature.com/articles/srep21146.pdf",
+    "theme": "方法学：中药分子机制分析平台"
+  },
+  {
+    "file": "08_TCM-database-Taiwan_PLoSOne_2011.pdf",
+    "doi": "10.1371/journal.pone.0015939",
+    "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0015939&type=printable",
+    "theme": "方法学：中药虚拟筛选数据库"
+  },
+  {
+    "file": "09_network-target-synergy_BMCSystBiol_2011.pdf",
+    "doi": "10.1186/1752-0509-5-S1-S10",
+    "url": "https://bmcsystbiol.biomedcentral.com/counter/pdf/10.1186/1752-0509-5-S1-S10",
+    "theme": "方法学：网络靶标与复方协同"
+  },
+  {
+    "file": "10_systems-pharmacology-TCM_FrontPharmacol_2019.pdf",
+    "doi": "10.3389/fphar.2019.00743",
+    "url": "https://www.frontiersin.org/articles/10.3389/fphar.2019.00743/pdf",
+    "theme": "方法学：中药系统药理学"
+  },
+  {
+    "file": "11_network-pharmacology-review_ChinMed_2025.pdf",
+    "doi": "10.1186/s13020-024-01056-z",
+    "url": "https://cmjournal.biomedcentral.com/counter/pdf/10.1186/s13020-024-01056-z",
+    "theme": "方法学：网络药理学研究范式（2025 综述）"
+  }
+]
