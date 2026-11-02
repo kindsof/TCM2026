@@ -6,7 +6,7 @@
 ## 摘要
 
 1. **发在哪里**：中西医结合没有唯一“对口刊”。按稿件类型分流：临床/循证投 *Chinese Journal of Integrative Medicine*、*Journal of Integrative Medicine*；中药药理与机制投 *Phytomedicine*、*Journal of Ethnopharmacology*、*Chinese Medicine*；针灸投 *Acupuncture in Medicine*；中文临床与共识投《中国中西医结合杂志》《中医杂志》。本文给出 11 本英文刊 + 4 本中文核心刊的对比表，以及 2021–2025 年各刊 PubMed 年发文量。
-2. **经典论文**：已下载 **14 篇开放获取（CC BY）论文**，覆盖临床证据、诊疗指南、WHO 政策、网络药理学与中药数据库、AI 五类，均附 DOI、被引次数与本地 PDF。受版权限制，中文经典多需通过 CNKI/万方机构订阅获取，本文只给线索、不提供下载。
+2. **经典论文**：已下载 **14 篇开放获取（CC BY）英文论文**，覆盖临床证据、诊疗指南、WHO 政策、网络药理学与中药数据库、AI 五类，均附 DOI、被引次数与本地 PDF；另整理 **8 篇中文论文**（中西医结合、中医、中医 + AI），提供官网链接与一键下载脚本，因期刊版权限制不随仓库分发 PDF。
 3. **数量走向**：2000–2025 年 PubMed 中，中医药相关论文由 296 篇增至 8,107 篇（27.4 倍），结合医学（integrative medicine）由 10 篇增至 643 篇（64.3 倍），针灸由 328 篇增至 3,108 篇（9.5 倍）。2020 年因 COVID-19 出现一次跳升，2023 年后再次提速（2023→2025 中医药 +41.7%）。
 4. **期刊结构**：核心“结合医学”期刊的年发文量并未随领域扩张，反而在 2016 年后账面下降——其中相当一部分是《中国中西医结合杂志》2018 年起不再被 PubMed 收录造成的统计假象；剔除该刊后，CJIM/JIM/IMR 合计从 2016 年 385 篇到 2025 年 373 篇，基本持平。真正的增量流向 *Phytomedicine*（566→1,498 篇/年）与 *Journal of Ethnopharmacology*（1,513→2,140 篇/年）等中药药理刊。
 5. **题目走向**：标题从“临床观察/经验总结/化学成分测定”转向“网络药理学、分子对接、肠道菌群、系统评价/Meta 分析、机器学习”。标题平均词数由 10.2 增至 13.6，含冒号的“主标题：副标题”结构由 12.5% 升至 47.1%。机制类词汇（mechanism）占比由 1.7% 升至 12.0%；网络药理学在 2023 年达到 9.7% 的峰值后回落至 2025 年的 3.1%，显示该方法已过扩张期。
@@ -141,6 +141,23 @@
 ### 2.4 中文经典的获取
 
 《中国中西医结合杂志》等中文刊的经典临床研究（如血府逐瘀汤、肾阳虚证本质、青蒿素与砷剂治疗急性早幼粒细胞白血病等）大多不在开放获取之列，需通过 CNKI、万方或机构图书馆订阅获取。本文不提供这些 PDF，以避免版权风险；可在对应期刊官网或 CNKI 按篇名检索。
+
+### 2.5 中文论文清单（免费阅读，不随仓库分发）
+
+除英文开放获取论文外，另整理 8 篇中文论文，覆盖中西医结合、中医、中医 + AI。它们可在《中草药》官网免费下载，但期刊保留版权、未采用 CC BY，因此仓库只存题录、链接与下载脚本，不直接再分发 PDF。
+
+| # | 主题 | 论文 | 年;卷(期):页 | DOI |
+|---|---|---|---|---|
+| 01 | 中西医结合 | [干燥综合征中西医结合诊疗指南](https://www.tiprpress.com/zcy/article/abstract/20251501) | 2025;56(15):5333-5346 | 10.7501/j.issn.0253-2670.2025.15.001 |
+| 02 | 中西医结合 | [慢性疲劳综合征的中西医进展：理论溯源、现代机制与临床干预策略](https://www.tiprpress.com/zcy/article/abstract/20260527) | 2026;57(5):1909-1923 | 10.7501/j.issn.0253-2670.2026.05.027 |
+| 03 | 中医 | [病毒性肺炎中医病证结合动物模型研究进展](https://www.tiprpress.com/zcy/article/abstract/20241231) | 2024;55(12):4248-4255 | 10.7501/j.issn.0253-2670.2024.12.031 |
+| 04 | 中医 | [抑郁症心肾不交证中医证候与神经递质的相关性及交泰丸疗效预测模型研究](https://www.tiprpress.com/zcy/article/abstract/20260517) | 2026;57(5):1787-1797 | 10.7501/j.issn.0253-2670.2026.05.017 |
+| 05 | 中医+AI | [中医药大语言模型的关键技术与构建策略](https://www.tiprpress.com/zcy/article/abstract/20241701) | 2024;55(17):5747-5756 | 10.7501/j.issn.0253-2670.2024.17.001 |
+| 06 | 中医+AI | [人工智能推动经典名方研发范式重塑的进展与应用展望](https://www.tiprpress.com/zcy/article/abstract/20260401) | 2026;57(4):1209-1220 | 10.7501/j.issn.0253-2670.2026.04.001 |
+| 07 | 中医+AI | [名医诊治阿尔茨海默病智能体构建方法初探](https://www.tiprpress.com/zcy/article/abstract/20261421) | 2026;57(14):5601-5612 | 10.7501/j.issn.0253-2670.2026.14.021 |
+| 08 | 中医+AI | [人工智能驱动的类器官/器官芯片：中药及民族药药效物质和靶标发现新范式](https://www.tiprpress.com/zcy/article/abstract/20260101) | 2026;57(1):1-12 | 10.7501/j.issn.0253-2670.2026.01.001 |
+
+运行 `python3 scripts/download_chinese_papers.py` 可将 8 篇 PDF 下载到 `papers/chinese/pdf/`（已在 `.gitignore` 中忽略），仅供个人学习；题录、作者与选读建议见 [`papers/chinese/README.md`](papers/chinese/README.md)。
 
 ---
 
@@ -380,11 +397,13 @@ AI 在这个领域同时扮演两个角色：一是**研究对象**——用机�
 | `data/ai_subtopics.csv`、`data/ai_top_journals.csv`、`data/ai_title_terms.csv` | AI 主题、期刊与标题词组 |
 | `data/titles_ai.csv` | AI+中医药标题全量（1,449 条） |
 | `figures/fig1`–`fig7` | 报告用 SVG 图（fig6–fig7 为 AI 章节） |
-| `papers/*.pdf`、`papers/index.csv` | 14 篇开放获取论文与元数据 |
+| `papers/*.pdf`、`papers/index.csv` | 14 篇开放获取英文论文与元数据 |
+| `papers/chinese/` | 8 篇中文论文题录、链接、选读说明与本地下载脚本 |
 | `scripts/collect_pubmed.py` | PubMed 计数与标题采集 |
 | `scripts/collect_journals.py` | 期刊发文量采集 |
 | `scripts/analyze_pubmed.py` | 统计与 SVG 绘图 |
-| `scripts/download_papers.py` | 论文下载与 Crossref 元数据 |
+| `scripts/download_papers.py` | 英文论文下载与 Crossref 元数据 |
+| `scripts/download_chinese_papers.py` | 中文论文本地下载（不随仓库分发 PDF） |
 | `scripts/collect_ai.py`、`scripts/analyze_ai.py` | AI 章节数据采集与分析 |
 
 ## 附录 C：复现
@@ -395,7 +414,8 @@ python3 scripts/collect_journals.py   # 期刊发文量
 python3 scripts/analyze_pubmed.py     # 生成 data/*.csv 与 figures/*.svg
 python3 scripts/collect_ai.py         # AI+中医药计数、主题与标题
 python3 scripts/analyze_ai.py         # 生成 AI 章节图表
-python3 scripts/download_papers.py    # 下载 papers/*.pdf
+python3 scripts/download_papers.py    # 下载英文论文 papers/*.pdf
+python3 scripts/download_chinese_papers.py  # 下载中文论文到 papers/chinese/pdf/（git 忽略）
 ```
 
 脚本只用 Python 标准库；SVG 由脚本直接生成，不依赖 matplotlib。检索日期不同，计数会略有变化。
