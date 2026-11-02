@@ -1,0 +1,23 @@
+direction,bigram,count_2000_2009,count_2021_2025,log_ratio
+up,network pharmacology,0,320,6.702
+up,molecular docking,0,140,5.878
+up,gut microbiota,0,95,5.492
+up,network meta-analysis,0,79,5.308
+up,systematic meta-analysis,7,172,3.375
+up,data mining,3,56,3.021
+up,research progress,14,212,2.924
+up,efficacy safety,7,103,2.864
+up,colorectal cancer,5,41,2.26
+up,active ingredients,9,68,2.215
+up,ischemic stroke,8,51,2.041
+up,molecular mechanism,9,43,1.761
+down,english translation,88,1,-3.838
+down,yin yang,43,1,-3.128
+down,simultaneous determination,58,5,-2.125
+down,high-performance liquid,57,5,-2.108
+down,liquid chromatography,109,24,-1.258
+down,blood circulation,44,10,-1.205
+down,blood stasis,70,26,-0.739
+down,acupuncture moxibustion,50,21,-0.615
+down,mass spectrometry,73,45,-0.24
+down,coronary heart,41,30,-0.069

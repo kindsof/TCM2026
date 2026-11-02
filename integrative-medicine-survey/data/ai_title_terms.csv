@@ -1,0 +1,61 @@
+kind,term,count
+unigram,learning,263
+unigram,machine,195
+unigram,network,192
+unigram,model,134
+unigram,deep,102
+unigram,pharmacology,97
+unigram,artificial,89
+unigram,prediction,80
+unigram,identification,77
+unigram,intelligence,72
+unigram,mechanism,71
+unigram,molecular,71
+unigram,research,64
+unigram,development,63
+unigram,neural,60
+unigram,application,56
+unigram,potential,56
+unigram,cancer,55
+unigram,tongue,54
+unigram,validation,53
+unigram,mechanisms,53
+unigram,diagnosis,51
+unigram,approach,50
+unigram,data,47
+unigram,classification,47
+unigram,tcm,45
+unigram,combined,44
+unigram,integrating,42
+unigram,method,40
+unigram,therapeutic,40
+bigram,machine learning,169
+bigram,network pharmacology,93
+bigram,artificial intelligence,67
+bigram,deep learning,66
+bigram,neural network,44
+bigram,molecular docking,28
+bigram,learning model,26
+bigram,prediction model,25
+bigram,development validation,22
+bigram,large language,22
+bigram,experimental validation,19
+bigram,rheumatoid arthritis,15
+bigram,learning approach,15
+bigram,pharmacology molecular,14
+bigram,language models,14
+bigram,tongue image,13
+bigram,convolutional neural,13
+bigram,molecular mechanisms,13
+bigram,quality control,13
+bigram,deep learning-based,13
+bigram,machine learning-based,13
+bigram,type diabetes,13
+bigram,neural networks,12
+bigram,hyperspectral imaging,12
+bigram,gastric cancer,10
+bigram,near-infrared spectroscopy,10
+bigram,diabetes mellitus,10
+bigram,risk prediction,10
+bigram,coronary heart,10
+bigram,graph neural,10
