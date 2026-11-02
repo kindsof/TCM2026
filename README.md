@@ -43,4 +43,4 @@ for TCM study
 
 ## 文献调研
 
-- [中西医结合论文：期刊推荐、经典文献与趋势分析](integrative-medicine-survey/README.md)——期刊选择、14 篇开放获取经典论文、PubMed 2000–2025 年论文数量与题目走向，以及 AI 与中西医结合研究的专门章节。
+- [中西医结合论文：期刊推荐、经典文献与趋势分析](integrative-medicine-survey/README.md)——期刊选择、14 篇开放获取英文论文与 8 篇中文论文、PubMed 2000–2025 年论文数量与题目走向，以及 AI 与中西医结合研究的专门章节。
