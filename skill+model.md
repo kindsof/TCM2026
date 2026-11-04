@@ -1,7 +1,7 @@
 # 中医（TCM）开源资源地图
 
-> **检索时间**：2026-11-01 CST（初版 2026-10-23；10-30 二次；11-01 hf-mirror 补遗）· **检索方式**：GitHub Search API + HuggingFace API（经 hf-mirror 镜像，含 tag 过滤）+ 逐仓库 README 核对 + Awesome-TCM-LLM 交叉验证
-> **覆盖**：Agent Skill / 大模型 / 应用工具 / 古籍教材 / 数据语料 / 综述专利 / 评测基准
+> **检索时间**：2026-11-04 CST（初版 2026-10-23；10-30 二次；11-01 hf-mirror 补遗；11-04 论文与范式）· **检索方式**：GitHub Search API + HuggingFace API（经 hf-mirror 镜像，含 tag 过滤）+ arXiv API + Crossref + 逐仓库 README 核对 + Awesome-TCM-LLM 交叉验证
+> **覆盖**：Agent Skill / 大模型 / 应用工具 / 古籍教材 / 数据语料 / 综述专利 / 评测基准 / 论文范式
 > **口径**：⭐ 与更新日期为检索当时快照；已剔除 funNLP、awesome-go 这类"泛中文大杂烩"噪音项
 > **性质**：不是链接清单，是**带判断的选型地图** —— 每条都标了"值不值得用、什么场景用、有什么坑"
 > **硬件基线**：按 **DGX Spark（GB10 / 128G 统一内存）** 为主要跑测机，兼容消费级显卡与笔记本（见 3.8）
@@ -20,6 +20,7 @@
 - [7. 综述 / 专利 / 行业动态](#7-综述--专利--行业动态)
 - [8. 场景选型（决策路径）](#8-场景选型决策路径)
 - [9. 避坑清单](#9-避坑清单)
+- [10. 论文与范式（2026-11）](#10-论文与范式2026-11)
 - [附录 A 检索方法](#附录-a-检索方法可复现)
 - [附录 B 术语表](#附录-b-术语表)
 - [附录 C 变更日志](#附录-c-变更日志)
@@ -673,6 +674,132 @@ Q3 要商用吗？
 
 ---
 
+## 10. 论文与范式（2026-11）
+
+> **本节结论**：截至 2026-11-04 的公开检索，中医大模型论文与 Agent Skill 论文基本是两条平行线：模型侧已覆盖 CPT/SFT/RL、RAG/KG、多模态四诊、评测与真实临床对比；Skill 侧在 2025-10 出现 SKILL.md 格式后，2026 年迅速形成技能库 / 技能评测的独立文献，但都不针对中医。公开检索里最接近交叉的是 **TCM-SEA**（让 agent 在失败病案后改写自己的「临床 skill 文档」）；从摘要看它把 skill 写成自然语言文档，未提 SKILL.md 规范，论文重点是病案 benchmark 与自我修订，不是技能库/安全审计。
+
+### 10.1 先回答：结合了吗？
+
+| 层次 | 现状 | 代表 |
+|---|---|---|
+| 论文层 | 两边几乎没有交集：本轮检索未发现 TCM 模型论文把 Agent Skill 作为变量，也未发现 Skill 评测论文包含中医任务 | 2602.12430、2607.10113、2608.10906 vs 2610.14705、2610.38333、2610.40663 |
+| 模型层 | 已 agent 化，但 skill 多以 tool / memory / workflow 实现，不是可复用技能包 | Jingfang（2502.04345）、DeepTCM1.0（2608.18103）、TCMScience（2610.24601） |
+| 工程层 | nihaixia / TCM.Skill 等 skill 仓库目前没看到对应论文与量化评测；模型论文也不把 skill 作为评测项 | 本文档 §2 |
+
+**判断**：按上述渠道检索，没有一篇同行评议论文系统回答「TCM LLM + Agent Skills」的效用、安全与成本。三个空白：① 没有 TCM 版 skill 评测；② 没有 TCM skill 数据集；③ 没有 skill + model + KG/RAG 的消融。TCM-SEA 是目前最接近的尝试，但从摘要看它把 skill 写成自然语言文档，未提 SKILL.md 规范，也未给出技能级评测协议。
+
+**检索边界**：arXiv、Crossref、PubMed 可机器检索；CNKI / 万方有登录墙，本轮只按题录与摘要核对，不保证穷尽中文期刊与硕博论文。
+
+### 10.2 论文从哪来：渠道矩阵
+
+| 渠道 | 看什么 | 适合 | 注意 |
+|---|---|---|---|
+| arXiv | cs.CL / cs.AI / cs.LG / cs.CV / q-bio.QM 预印本 | 追最新（TCM 论文大多先上 arXiv） | 未同行评议；以 v1 日期为准 |
+| OpenReview | ICLR / NeurIPS / TMLR 投稿、评审、rebuttal | 看方法争议与审稿意见 | 不是所有会议都用 |
+| ACL Anthology | ACL / EMNLP / NAACL / COLING | NLP 主会与 Findings | 页码稳定，适合引用 |
+| ML 会议 | NeurIPS / ICLR / ICML / AAAI / IJCAI / KDD / WWW | 方法创新 | 医学落地论文少 |
+| 医学 / 生信 | IEEE BIBM、AMIA、ACM BCB、MICCAI；JBI、JAMIA、npj Digital Medicine、Lancet Digital Health | 临床、评测、真实世界 | 周期长、门槛高 |
+| 中医期刊 | Chinese Medicine、JTCMS、中华中医药杂志、中国中医药信息杂志、上海中医药杂志、南京/北京中医药大学学报 | 中文临床与理论 | 多在 CNKI / 万方，需机构权限 |
+| 索引 / 追踪 | PubMed、Semantic Scholar、Google Scholar、dblp、Papers with Code、HF Papers、alphaXiv、Connected Papers | 引文追溯、找同作者 | Google Scholar 噪音大；注意预印本与正式版混排 |
+| 其他 | medRxiv / bioRxiv、SSRN / Research Square、CNIPA 专利、会议 accepted lists、实验室 blog、X/Twitter、机器之心/量子位、GitHub awesome lists | 灰色文献与行业动态 | 只作线索，回到原文核对 |
+
+**检索模板**
+
+```bash
+# arXiv API：标题/摘要里同时出现 TCM 与 LLM/agent/skill
+curl -s "https://export.arxiv.org/api/query?search_query=all:%22traditional%20Chinese%20medicine%22%20AND%20all:%22large%20language%20model%22&sortBy=submittedDate&sortOrder=descending&max_results=50"
+# 其他组合
+# all:"TCM" AND all:"agent"
+# all:"agent skills" AND all:"medical"
+```
+
+- Google Scholar：`"traditional Chinese medicine" "large language model" after:2024`、`"agent skills" "clinical" after:2025`
+- PubMed：`("Medicine, Chinese Traditional"[Mesh]) AND ("Large Language Models"[Mesh])`
+- ACL Anthology：`https://aclanthology.org/search/?q=TCM`
+- 中文：CNKI / 万方 / 维普检索 `中医 大模型`、`中医 智能体`、`辨证论治 大语言模型`；硕博论文的综述章节往往比期刊更全
+
+### 10.3 基本范式：八条路线
+
+| 范式 | 代表工作 | 做法 | 强项 | 主要坑 |
+|---|---|---|---|---|
+| **① 领域 CPT + SFT + RL** | Qibo（2403.16056）、BianCang（2411.11027）、Tianyi（2505.13156）、Lingdan-V2（2610.14705）、GRPO-TCM（2510.17402）、TianHui（2509.19834） | 2GB~16.6B token 领域 CPT → SFT → RLAIF / GRPO / 处方 RL | 知识注入、术语与风格、处方对齐 | 数据质量与许可、灾难遗忘、评测不同源 |
+| **② 结构化推理 / 方证链** | Syndrome/Synergy/Safety（2609.25755）、CORE-Acu（2603.08321）、DoPI（2507.04877）、TCM-DiffRAG（2602.22828） | PG-CoT / S-CoT、KG 约束、规则 DPO、多轮问诊 | 可审计、可解释、能编码禁忌 | schema 与标注成本高、覆盖不全 |
+| **③ RAG / KG grounding** | ZhiFangDanTai（2509.05867）、DiagnosGraph（2504.07724）、LingShu（2608.20402）、MMIR-TCM（2607.01814） | GraphRAG、多轮检索、症状中心 KG、引用溯源 | 知识新鲜、可溯源、训练成本低 | 检索质量、KB 覆盖、延迟 |
+| **④ 多模态四诊** | ShizhenGPT（2508.14706）、LingLan（2609.25715）、Fu-TCM（2610.38333） | 舌/面/脉/声 + 文本对齐、视觉指令、BGPO | 接近真实四诊流程 | 数据/设备/隐私、模态对齐、评测难 |
+| **⑤ Agent / Skill / tool** | Jingfang（2502.04345）、DeepTCM1.0（2608.18103）、TCMScience（2610.24601）、TCM-SEA（2610.40663）、Med-Shicheng（2603.23520）；通用侧见 2602.12430、2603.28815、2606.20659、2604.20441 | 多 agent 角色、工具注册、技能库、记忆、自我修订 | 模块化、可复用、可审计 | skill 质量与安全无标准、缺 TCM 基准 |
+| **⑥ 评测基准** | TCM-Ladder（2505.24063）、LingLanMedBench（2602.01779）、MTCMB（2506.01252）、TCMBench（2406.01126）、TCM-3CEval（2503.07041）/5CEval（2511.13169）、TCM-Eval（2511.07148）、TCMClinicalReason-Bench（2610.04215） | 考试题 → 临床推理 → 患者分组 / Oracle / 安全 | 可比、可复现 | 污染、同源数据、分数不可跨表 |
+| **⑦ 数据 / 合成 / 蒸馏** | ShizhenGPT（100GB 文本 + 200GB 多模态）、Lingdan（16.6B CPT token）、ChiMed 2.0（2507.15275）、TCM-Eval SI-CoTE、TCM-FTP DigestDS（2407.10510） | 古籍/教材/EMR/合成/教师蒸馏 | 规模与覆盖 | 版权、隐私、去重、蒸馏污染 |
+| **⑧ 真实世界临床验证** | Tianyi（2505.13156）、LLMs vs Physicians（2609.17544）、TCMClinicalReason-Bench（2610.04215） | 多中心病例、医生盲评、处方级指标 | 接近临床 | 样本量、伦理、缺前瞻试验 |
+
+**读法**：①—④ 是「模型怎么做」，⑤ 是「系统怎么组织」，⑥—⑧ 是「怎么证明有用」。目前论文集中在 ①③④⑥，⑤ 最热但最不成熟，⑧ 最缺。
+
+### 10.4 必读论文清单
+
+> 综述先看 §7.1；这里只列 primary papers，链接以 arXiv 为准，已发表版本在备注里标 DOI。
+
+**TCM 侧（按时间倒序）**
+
+| 论文 | 时间 | 类型 | 一句话 | 链接 |
+|---|---|---|---|---|
+| Fu-TCM | 2026-10 | 多模态 + BGPO | 7.12M 样本、27B，六个 TCM benchmark 领先 | [2610.38333](https://arxiv.org/abs/2610.38333) |
+| Lingdan-V2 | 2026-10 | 模型 + RL | 4B/8B/14B，CPT + 推理监督 + 处方 RL | [2610.14705](https://arxiv.org/abs/2610.14705) |
+| TCM-SEA / TCM-MisDx | 2026-10 | Agent + skill | 失败病案后自我改写临床 skill 文档；820 例 benchmark | [2610.40663](https://arxiv.org/abs/2610.40663) |
+| TCMScience | 2026-10 | Agent | 117 个公共数据源连接器、444 个类型化操作 | [2610.24601](https://arxiv.org/abs/2610.24601) |
+| TCMClinicalReason-Bench | 2026-10 | 评测 | 2,000 例多中心 EHR；七段推理 + 临床医生盲评 | [2610.04215](https://arxiv.org/abs/2610.04215) |
+| Syndrome, Synergy, Safety | 2026-09 | 处方 + RL | SFT → PG-CoT → Dynamic → K-RL，编码十八反等禁忌 | [2609.25755](https://arxiv.org/abs/2609.25755) |
+| LingLan | 2026-09 | 多模态 | 舌/脉图像转结构化四诊记录，LingLan-14B | [2609.25715](https://arxiv.org/abs/2609.25715) |
+| LLMs vs Physicians | 2026-07 | 临床对比 | 349 例、16 个 LLM vs 60 位中医师；处方与安全仍有差距 | [2609.17544](https://arxiv.org/abs/2609.17544) |
+| LingShu | 2026-07 | KG | 症状中心 KG，连接中医与现代生物医学 | [2608.20402](https://arxiv.org/abs/2608.20402) |
+| DeepTCM1.0 | 2026-06 | 多专家 Agent | 用通用 LLM 做方剂机制解析 | [2608.18103](https://arxiv.org/abs/2608.18103) |
+| MMIR-TCM | 2026-07 | 多模态 + RAG | Memory-SAM 舌象 + Qwen3-VL + RAG | [2607.01814](https://arxiv.org/abs/2607.01814) |
+| DongYuan | 2026-03 | 中西医结合 | 脾胃病 ICWM 数据集 + SSDF-Core | [2603.28191](https://arxiv.org/abs/2603.28191) |
+| CORE-Acu | 2026-03 | 针灸 + KG | 结构化推理链 + KG 安全校验 | [2603.08321](https://arxiv.org/abs/2603.08321) |
+| TCM-DiffRAG | 2026-02 | RAG | KG + CoT 的个性化辨证 | [2602.22828](https://arxiv.org/abs/2602.22828) |
+| LingLanMedBench | 2026-02 | 评测 | 25,620 题、13 子任务、5 领域 | [2602.01779](https://arxiv.org/abs/2602.01779) |
+| TCM-5CEval | 2025-11 | 评测 | 知识 / 经典 / 临床 / 本草 / 非药物五维 | [2511.13169](https://arxiv.org/abs/2511.13169) |
+| TCM-Eval | 2025-11 | 评测 + 数据 | 动态题库 + SI-CoTE + ZMT | [2511.07148](https://arxiv.org/abs/2511.07148) |
+| ShizhenGPT | 2025-08 | 多模态 | 100GB 文本 + 200GB 多模态（舌/脉/面/声） | [2508.14706](https://arxiv.org/abs/2508.14706) |
+| TCM-Ladder | 2025-05 | 评测 | 首个中医多模态 QA 基准 | [2505.24063](https://arxiv.org/abs/2505.24063) |
+| Tianyi | 2025-05 | 模型 + 临床 | 7.6B，读书—临证—跟师 + 真实世界验证；Information Fusion 2026 | [2505.13156](https://arxiv.org/abs/2505.13156) · [DOI](https://doi.org/10.1016/j.inffus.2025.103663) |
+| Jingfang | 2025-02 | 多智能体 | 专科 agent 协作 + 辨证 | [2502.04345](https://arxiv.org/abs/2502.04345) |
+| BianCang | 2024-11 | 模型 | 两阶段 CPT + SFT；JBHI 2025 | [2411.11027](https://arxiv.org/abs/2411.11027) |
+| Qibo | 2024-03 | 模型 | 2GB 语料 CPT + SFT；ESWA 2025 | [2403.16056](https://arxiv.org/abs/2403.16056) · [DOI](https://doi.org/10.1016/j.eswa.2025.127672) |
+| MedChatZH | 2023-09 | 问诊 | 中医书籍预训练 + 问诊指令微调 | [2309.01114](https://arxiv.org/abs/2309.01114) |
+
+**AI / Skill 侧（按主题）**
+
+| 论文 / 资源 | 时间 | 主题 | 一句话 | 链接 |
+|---|---|---|---|---|
+| Agent Skills for LLMs | 2026-02 | 综述 | SKILL.md、渐进披露、MCP、技能获取与安全 | [2602.12430](https://arxiv.org/abs/2602.12430) |
+| Dynamic Agent Skills | 2026-07 | 综述 | 124 篇 2023-2026 的技能库生命周期与分类；TMLR 2026 | [2607.10113](https://arxiv.org/abs/2607.10113) |
+| GitSkills | 2026-08 | 数据集 | 282,200 个仓库、3,797,117 个 SKILL.md（2026-07） | [2608.10906](https://arxiv.org/abs/2608.10906) |
+| SkillTester | 2026-03 | 评测 | 技能效用 + 安全评分 | [2603.28815](https://arxiv.org/abs/2603.28815) |
+| Skill Coverage | 2026-06 | 评测 | 用轨迹覆盖约束衡量技能是否被真正执行 | [2606.20659](https://arxiv.org/abs/2606.20659) |
+| MedSkillAudit | 2026-04 | 医学技能审计 | 75 个医学研究 skill 的发布前审计 | [2604.20441](https://arxiv.org/abs/2604.20441) |
+| SAGE | 2025-12 | RL + 技能库 | 用 GRPO 让 agent 在任务链中积累技能 | [2512.17102](https://arxiv.org/abs/2512.17102) |
+| SkeMex | 2026-06 | 医学技能记忆 | 把交互轨迹蒸馏为可复用技能，不更新权重 | [2606.09365](https://arxiv.org/abs/2606.09365) |
+| MCP medical | 2025-09 | 工具协议 | 用 MCP 做医学概念标准化，零训练 | [2509.03828](https://arxiv.org/abs/2509.03828) |
+| ClinVerse | 2026-10 | 多 agent 环境 | 150k 真实 EHR 病例的诊断训练/评测环境 | [2610.34878](https://arxiv.org/abs/2610.34878) |
+| Baichuan-M4 | 2026-06 | 临床 agent 系统 | 连续照护、工具层、患者记忆、多 agent | [2606.08982](https://arxiv.org/abs/2606.08982) |
+| ReflecTool | 2024-10 | 工具增强临床 agent | 长记忆 + 工具经验；ACL 2025 | [2410.17657](https://arxiv.org/abs/2410.17657) |
+| Learning to Be A Doctor | 2025-04 | Agent 架构搜索 | 自动设计医疗 agent 工作流；ACM MM 2025 | [2504.11301](https://arxiv.org/abs/2504.11301) |
+| LongMedBench | 2026-07 | 长程评测 | 335 患者、19.72 次就诊/人 | [2607.09322](https://arxiv.org/abs/2607.09322) |
+| Agent Hospital | 2024-05 | 模拟环境 | 可演化医疗 agent 的医院模拟器 | [2405.02957](https://arxiv.org/abs/2405.02957) |
+
+**基础三篇**（只补 AI 背景时看）：ReAct（[2210.03629](https://arxiv.org/abs/2210.03629)）、Toolformer（[2302.04761](https://arxiv.org/abs/2302.04761)）、Voyager（[2305.16291](https://arxiv.org/abs/2305.16291)）；RAG 侧加 GraphRAG（[2404.16130](https://arxiv.org/abs/2404.16130)）、MedRAG（[2402.13178](https://arxiv.org/abs/2402.13178)）。
+
+### 10.5 缺口与可做的题
+
+| 缺口 | 具体表现 | 可做的题 |
+|---|---|---|
+| 没有 TCM 版 skill 评测 | SkillTester / Skill Coverage / MedSkillAudit 都不含辨证、方证、禁忌 | **TCM-SkillBench**：50-100 个 SKILL.md（六经辨证、方证鉴别、四诊采集、十八反十九畏、妊娠禁忌、毒性药剂量），比较 no-skill / RAG / skill / skill+RAG；指标 accuracy、citation、safety、token、latency |
+| 没有 TCM skill 数据集 | GitSkills 379 万条里中医占比未知；nihaixia / TCM.Skill 未进论文 | **TCM skill 审计**：把 MedSkillAudit + SkillTester 迁到中医，加入法规/毒性/剂量红线与红队测试 |
+| 没有 skill + model + KG 的消融 | 模型论文不比 skill，skill 仓库不比模型 | **Skill + KG + agent**：把 LingShu KG、TCM-DiffRAG 与 SKILL.md 组合，在 TCM-Ladder / LingLanMedBench + 真实病案上做消融 |
+
+**投稿方向**：ACL / EMNLP / ACL Findings、AMIA、JBI、IEEE BIBM、JAMIA、npj Digital Medicine；技能方向可投 Agent Skills '26 workshop。**注意**：临床安全、数据许可、患者隐私、预注册；预印本不能当临床证据。
+
+---
+
 ## 附录 A 检索方法（可复现）
 
 ```bash
@@ -743,7 +870,8 @@ curl -s -o /dev/null -w "%{http_code}\n" "$HF_ENDPOINT/api/models/TCMLLM/Lingdan
 | 2026-10-30（二次） | 新增 **3.8 硬件适配：DGX Spark（GB10）** —— 公开规格核对（273 GB/s / 128G UMA / CUDA 13.0.3）+ 16 个模型的显存与 tok/s 估算表 + MiMo-9B 跑法 + Spark 栈避坑；同步更新 3.7 矩阵、8.1 决策树、8.2 场景表、9.5 工具链 |
 | 2026-10-30 | ① 修复文档误存两份的问题；② 合并 HuggingFace 权重盘点（3.3）、2026 新模型（灵丹-V2、HuatuoGPT-3、man_medical 等）、评测基准（3.6）；③ 第 2 节重写为分层评价 + 流派地图 + 挑选标准；④ 全文重排：加目录、分层标准、五个判断、决策路径、避坑清单、术语表 |
 | 2026-11-01 | hf-mirror 补遗（tag 重扫）：新增 **3.3.1 中西医结合专项**，收 7 个可下载权重（medical-v5-8b、中药学 Qwen3-8B、Qwen3-4B 医疗微调、TraceMed、TCM-Qwen3.5-9B-SFT-R2、YIAN-4B、TCM-m3）；补灵丹-V2 官方 HF 链接/arXiv、Baize GGUF、MiMo HF；"真能下载权重"口径由 16 改为 20+；附录 A 增加 tag 过滤方法 |
+| 2026-11-04 | 新增 **10. 论文与范式（2026-11）**：回答「中医大模型是否与 Agent Skill 论文结合」——结论是两条平行线，最接近的是 TCM-SEA；收 8 条基本范式、8 类论文渠道与检索模板、24 篇 TCM + 15 篇 AI/Skill 论文清单、3 个可做的题 |
 
 ---
 
-初版 2026-10-23 · 重构 2026-10-30 · 补遗 2026-11-01 CST*
+初版 2026-10-23 · 重构 2026-10-30 · 补遗 2026-11-01 · 论文范式 2026-11-04 CST*
