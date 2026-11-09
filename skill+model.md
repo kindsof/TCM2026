@@ -1,6 +1,6 @@
 # 中医（TCM）开源资源地图
 
-> **检索时间**：2026-11-04 CST（初版 2026-10-23；10-30 二次；11-01 hf-mirror 补遗；11-04 论文与范式）· **检索方式**：GitHub Search API + HuggingFace API（经 hf-mirror 镜像，含 tag 过滤）+ arXiv API + Crossref + 逐仓库 README 核对 + Awesome-TCM-LLM 交叉验证
+> **检索时间**：2026-11-09 CST（初版 2026-10-23；10-30 二次；11-01 hf-mirror 补遗；11-04 论文与范式；11-09 复核社区提名模型 + 灵丹-V2 发布状态）· **检索方式**：GitHub Search API + HuggingFace API（经 hf-mirror 镜像，含 tag 过滤）+ ModelScope 文件树核对 + arXiv API + Crossref + 逐仓库 README 核对 + Awesome-TCM-LLM 交叉验证
 > **覆盖**：Agent Skill / 大模型 / 应用工具 / 古籍教材 / 数据语料 / 综述专利 / 评测基准 / 论文范式
 > **口径**：⭐ 与更新日期为检索当时快照；已剔除 funNLP、awesome-go 这类"泛中文大杂烩"噪音项
 > **性质**：不是链接清单，是**带判断的选型地图** —— 每条都标了"值不值得用、什么场景用、有什么坑"
@@ -194,7 +194,7 @@ cp -r nihaixia ~/.claude/skills/nihaixia/
 | 仲景 CMLM-ZhongJing | [pariskang/CMLM-ZhongJing](https://github.com/pariskang/CMLM-ZhongJing) | 533 | 福耀科技大学 / 2025 | A | 首个中医专用 LLM，专家知识引导微调，权重 ZhongjingGPT1-13B（gated）。另有 1.5B / 1.8B / 7B 小模型系列，端侧可跑 |
 | 神农 ShenNong | [michael-wzhu/ShenNong-TCM-LLM](https://github.com/michael-wzhu/ShenNong-TCM-LLM) | 513 | 华东师大 / 2023 | B+ | 首个中医药中文大模型，配套 ShenNong_TCM_Dataset。**价值在数据开源**，模型本身已过时 |
 | TCMLLM / 灵丹 v1 | [2020MEAI/TCMLLM](https://github.com/2020MEAI/TCMLLM) | 273 | 北交大 / 2024 | B | 中医药大模型 + 处方推荐，Lingdan-13B-Base。**已被 v2 取代**，只作历史引用 |
-| **灵丹-V2 Lingdan-V2** | [TCMAI-BJTU/Lingdan-V2](https://github.com/TCMAI-BJTU/Lingdan-V2) | 3 | 北交大 / 2026 | **S** | **当前最完整的开源中医训练管线**：Qwen3 4B/8B/14B × Base（CPT 16.6B token）/ SFT（773 万样本）/ **R1（处方 GRPO）**，Apache-2.0，有在线 demo [lingdan.chat](https://lingdan.chat/)、[HF 官方组织](https://huggingface.co/TCMLLM)（9 个 checkpoint，14B-R1 仍 gated）、ModelScope 镜像与 [arXiv 2610.14705](https://arxiv.org/abs/2610.14705)。**星只有 3 个但质量最高** —— 本文档里 star 与质量反差最大的一条 |
+| **灵丹-V2 Lingdan-V2** | [TCMAI-BJTU/Lingdan-V2](https://github.com/TCMAI-BJTU/Lingdan-V2) | 3 | 北交大 / 2026 | **S** | **当前最完整的开源中医训练管线**：Qwen3 4B/8B/14B × Base（CPT 16.62B token）/ SFT（773 万样本）/ **R1（处方 GRPO）**，Apache-2.0，有在线 demo [lingdan.chat](https://lingdan.chat/)、[HF 官方组织](https://huggingface.co/TCMLLM)、ModelScope 镜像与 [arXiv 2610.14705](https://arxiv.org/abs/2610.14705)。**星只有 3 个但质量最高** —— 本文档里 star 与质量反差最大的一条。<br>**⚠️ 2026-11-09 复核**：HF 实际可下载的是 **8 个** checkpoint（4B/8B 各 Base/SFT/R1 + 14B Base/SFT，全部 Apache-2.0 非 gated）；README Model Zoo 里列的 **`Lingdan-14B-R1` 权重并未发布**（HF API 404，ModelScope 也取不到文件树，只有 8B-R1 等 8 个有 safetensors）。所以论文里最强的那档（Overall 67.1 / 处方 F1 37.0）**现在拿不到**，实际可用的处方旗舰是 **8B-R1**（Overall 63.7 / 处方 F1 34.5，私有临床 Herb F1 50.7） |
 | 黄帝 HuangDI | [Zlasejd/HuangDI](https://github.com/Zlasejd/HuangDI) | 163 | 2024 | C | 基于 Ziya-LLaMA-13B-V1 的中医古籍知识问答。底座已停更，只适合古籍问答对照 |
 | 时珍 ShizhenGPT | [FreedomIntelligence/ShizhenGPT](https://github.com/FreedomIntelligence/ShizhenGPT) | 154 | 港中深等 / 2025 | **A+** | **多模态四诊**（舌/脉/面/声），ShizhenGPT-7B-Omni，数据与权重都开源。**做四诊多模态的唯一现成起点**，另有 32B-VL 大号（gated） |
 | MedChatZH | [tyang816/MedChatZH](https://github.com/tyang816/MedChatZH) | 111 | 华东理工 / 2024 | A | 中西医**问诊对话**微调（Computers in Biology and Medicine 2024），开源问诊数据集。做问诊产品的现成数据源 |
@@ -234,17 +234,32 @@ cp -r nihaixia ~/.claude/skills/nihaixia/
 | **中药学 Qwen3-8B** | Qwen3-8B LoRA / GGUF | Apache-2.0 | B+ | 按《中药学（新世纪第四版）》883 页教材蒸馏：410 味药、4,172 知识点、约 13k 样本；除中药问答外专门做了**中西药联用**（阿司匹林/华法林/二甲双胍等）与"幻觉审查官"。q4/q5/q8 GGUF 齐全；**教材级知识，无临床评测** | [GGUF](https://huggingface.co/chenhaodev/tcm-qwen3-8b-gguf) · [LoRA](https://huggingface.co/chenhaodev/tcm-qwen3-8b-lora) |
 | **Qwen3-4B 医疗微调** | Qwen3-4B | Apache-2.0 | B | 卡片自述 80% 中医 + 20% 西医/通用推理的 QLoRA 合并权重；无评测，自己也列了"可能混淆中西医概念、编造处方"等限制。适合端侧或小参数对照，不适合当主基线 | [权重](https://huggingface.co/ronan7878/qwen3-4b-medical-finetune) |
 | **TraceMed** | Qwen3-4B | 未标（待补） | B+ | 甘草医生 AI；辨证/方剂对比/考试题，回答逐句带引用、可定位到教材原文段落；32k 上下文、bf16 约 8.8GB。**训练数据、评测、许可都未公布**，先当 citation 型试用基线 | [权重](https://huggingface.co/GancaoDoctorAI/TraceMed) |
-| **TCM-Qwen3.5-9B-SFT-R2** | Qwen3.5-9B | 未标 | B+ | 与 3.3 的 `qwen3.5-9b-tcm-cpt` 同底座：CPT 6.16 亿 token + SFT 21,586 条后的**全量 BF16 合并权重**，thinking/non-thinking 双模式；保留视觉组件但未做舌诊训练。**可直接跑，许可待补** | [权重](https://huggingface.co/Xxiao2023/TCM-Qwen3.5-9B-SFT-R2) |
+| **TCM-Qwen3.5-9B-SFT-R2** | Qwen3.5-9B | 未标 | B+ | 与 3.3 的 `qwen3.5-9b-tcm-cpt` 同底座：CPT 6.16 亿 token + SFT 21,586 条后的**全量 BF16 合并权重**，thinking/non-thinking 双模式；保留视觉组件但未做舌诊训练。**可直接跑，许可待补**（2026-11-09 复核：`cardData.license` 仍为空，作者 Xxiao2023 名下只有这一个 + TCM-Qwen2.5-7B-SFT-V1，无新增） | [权重](https://huggingface.co/Xxiao2023/TCM-Qwen3.5-9B-SFT-R2) |
 | **YIAN-4B** | Qwen3-4B LoRA（66MB） | CC BY-NC 4.0 | **A-** | 中医医案**结构化抽取**专用：从带理论铺陈/按语的整篇医案中定位病历，输出 7 字段 JSON（患者/主症/舌/脉/证/治法/方药剂量）；12,500 条 TCM-YIAN 指令。抽取场景很实用，**禁商用**；数据集 DOI 仍是占位符 | [权重](https://huggingface.co/mark1111222/YIAN-4B) |
 | **TCM-m3** | bge-m3（2.27GB） | Apache-2.0 | A- | 中医 RAG **嵌入模型**，与 `cduoduo/TCM-Rerank-v2-m3` 配套；无评测、模型卡只有一句，但比通用 embedding 更贴中医术语，做知识库检索可直接替 | [权重](https://huggingface.co/cduoduo/TCM-m3) |
 
 **判断**
 
 1. **"中西医兼通"不是标签，是训练配比**：本轮新增里，只有 `medical-v5-8b`（真实临床数据 + M2 蒸馏）、`ronan7878` 4B（80/20 配比）、`中药学 Qwen3-8B`（中西药联用专项）明确混合中西数据；`MedChatZH`（3.2 行）仍是最早的"中西医问诊"开源模型/数据，但底座停在 2024。其余新增一律是中医专用，不要在方案里写成"中西医结合"。
-2. **灵丹-V2 官方权重是这轮最大的增量**：`TCMLLM/Lingdan-{4B,8B,14B}-{Base,SFT,R1}` 共 9 个 checkpoint，8 个非 gated（14B-R1 与对应 GGUF 仍 401）；Apache-2.0 + arXiv 2610.14705 + LingLan 榜。做新项目直接从这里选，别再拿 2024 年的 Lingdan-13B。
+2. **灵丹-V2 官方权重是这轮最大的增量**：`TCMLLM/Lingdan-{4B,8B,14B}-{Base,SFT,R1}`，**2026-11-09 复核：实际公开可下载 8 个**（4B/8B 全 6 个 + 14B Base/SFT），全部 Apache-2.0 且非 gated；**`Lingdan-14B-R1` 只有 README 链接没有权重**（HF API `Repository not found`，ModelScope 文件树同样 404，只剩占位页）—— 从"11-01 时是 401 gated"变成"404 不存在"，等发布之前别按它做选型。社区 GGUF 有 6 个（`mradermacher/` 下的 Lingdan-4B-Base / 4B-R1 / 8B-Base / 8B-R1 / 14B-Base / 14B-SFT-GGUF，下载量 479–807，比官方 safetensors 还高），SFT 缺 4B/8B、R1 同样缺 14B。Apache-2.0 + arXiv 2610.14705 + LingLan 榜。做新项目从 8B-R1 起，别再拿 2024 年的 Lingdan-13B。
 3. **"能下载"≠"能信"**：TraceMed / TCM-Qwen3.5 未标许可，YIAN / MiMo 是 CC BY-NC，medical-v5 权重 Apache-2.0 但训练数据受 Baichuan-M2 条款限制，中药学 Qwen3 不随权重发布教材原文。商用前逐项核，别只看 license 字段。
 4. **本轮不采信的**：`NYCU-CGI-LLM/*-TCM-SD`、`Capmaomao/TCM_8B`、`ElonYi/Qwen2.5-7B-zhongyi`、`Huanghaonan88/*-ShangHanLun`、`wq528/tongue_vl_8B` 等要么无模型卡、要么只有 Unsloth 模板卡，没有训练/评测信息，只适合当"存在性"记录。
 5. **方法**：hf-mirror 的 `search=` 对中文关键词（中医/中西医/仲景）返回 0；按 tag 扫才全：`filter=tcm`（28）、`filter=traditional-chinese-medicine`（29）、`filter=chinese-medicine`（9）。检索时间 2026-11-01。
+
+### 3.3.2 2026-11-09 复核：社区再次提名的 4 个模型
+
+> **本节结论**：Issue #10 里点名的 4 个 HF 模型，**3 个早已收录且信息仍然准确，无需改动**；真正的更新不在"补新模型"，而在**灵丹-V2 的 14B-R1 权重始终没发布** —— 而它正是本文档此前推荐的处方首选。
+
+| 被点名的模型 | 之前是否已收录 | 本次核对结果 | 处理 |
+|---|:--:|---|---|
+| `Xxiao2023/TCM-Qwen3.5-9B-SFT-R2` | ✅ 3.3.1 | 存在、非 gated、可下载；**`license` 字段仍为空**；作者名下无新作（只有它 + `TCM-Qwen2.5-7B-SFT-V1`） | 保留，许可待补的提醒再确认一次 |
+| `TCMLLM/Lingdan-14B-SFT` | ✅ 3.2（灵丹-V2 行内） | 存在、Apache-2.0、14.77B、非 gated，**14B 档目前能下到的就是它和 Base** | 行内补"14B-R1 未发布"的事实 |
+| `johnson/MiMo-9B-TCM-Andrology-LoRA` | ✅ 3.2 + 3.8 专段 | CC BY-NC 4.0、LoRA 适配器、评测协议与本文所述一致 | 无需改动 |
+| `chenhaodev/tcm-qwen3-8b-gguf` | ✅ 3.3.1（中药学 Qwen3-8B） | Apache-2.0、q4/q5/q8 齐全、410 味药教材向 | 无需改动 |
+
+**核对方法**（比上一轮多了一步）：除了 HF 的 `api/models/<id>`，还查了 `api/models?author=TCMLLM`（组织实际发布了什么）和 ModelScope 的 `repo/files?Recursive=true`（仓库页存在 ≠ 权重上传）。三者不一致时，**以文件树为准**。
+
+**这条更新为什么值得单独写**：`Lingdan-14B-R1` 是论文里打败 DeepSeek-R1 的那个 checkpoint，README、arXiv、Model Zoo 表都列着它，但 HF 返回 `Repository not found`、ModelScope 文件树 404。**任何按 14B-R1 写的方案现在都跑不起来**，改用 8B-R1（私有临床 Herb F1 50.7，与 14B-R1 的 52.8 差 2.1）或等权重发布。
 
 ### 3.4 有论文、**无公开权重**（看方向可以，别当底座）
 
@@ -302,12 +317,12 @@ cp -r nihaixia ~/.claude/skills/nihaixia/
 |---|---|---|---|
 | 24G 单卡，要能跑 + 有论文背书 | **BianCang-7B-Instruct** | Huatuo-LLaMA（2023） | 底座差两代，且扁仓有 JBHI 正刊 + 权重 + GGUF |
 | 12G / 笔记本，纯推理 | **Xinghe1.2-9B-GGUF** 或 **Baize-0.6B** | 13B 级中医模型 | 量化后 9B 约 6G，0.6B 约 0.5G |
-| 要辨证 / 开方质量 | **Lingdan-14B-R1** | 通用医疗模型直接问中医 | R1 阶段专门做处方 GRPO，是唯一有处方专项对齐的开源权重 |
+| 要辨证 / 开方质量 | **Lingdan-8B-R1**（14B-R1 权重未发布，见 3.2） | 通用医疗模型直接问中医 | R1 阶段专门做处方 GRPO，是唯一有处方专项对齐的开源权重 |
 | 要舌象 / 面象 / 声音 | **ShizhenGPT-7B-Omni** | 纯文本模型 + 图片 OCR | 目前唯一开源中医多模态（6B token 对齐语料） |
 | 要自己 CPT | **ChatTCM-7B-Pretrain** / **qwen3.5-9b-tcm-cpt** | 从零训练 | 有现成 CPT 权重 + 6B token 语料（ShizhenGPT） |
 | 做论文对比实验 | 中医侧：扁仓 + 灵丹 + 神农 + 时珍；通用侧：HuatuoGPT-3-27B | 只跑自己模型 | 审稿人要看到强基线 |
 | 要商用 | **BianCang**（查许可）/ **Lingdan-V2**（Apache-2.0） | `man_medical`、TCM-Qwen2.5-SFT | 后两者 CC BY-NC，禁商用 |
-| **有 DGX Spark** | **Lingdan-14B bf16 + ShizhenGPT-32B-VL + HuatuoGPT-3-27B** | 8B 级量化模型 | 128G 统一内存足以全精度跑 32B，量化纯属浪费（见 3.8） |
+| **有 DGX Spark** | **Lingdan-14B-SFT bf16 + ShizhenGPT-32B-VL + HuatuoGPT-3-27B**（处方专项对齐用 Lingdan-8B-R1，14B-R1 未发布权重） | 8B 级量化模型 | 128G 统一内存足以全精度跑 32B，量化纯属浪费（见 3.8） |
 
 ---
 
@@ -357,7 +372,7 @@ cp -r nihaixia ~/.claude/skills/nihaixia/
 |---|---|---|---|
 | 多模态四诊 | 只能用 ShizhenGPT-7B-Omni | **ShizhenGPT-32B-VL bf16（64G）** | 舌/面/声理解精度直接上一个台阶 |
 | 论文对照基线 | 只能引别人数字 | **HuatuoGPT-3-27B / Baichuan-M2-32B 本地跑** | 自己做同口径对比，不用信别人的表 |
-| 处方评测 | 14B 要量化，精度受损 | **Lingdan-14B bf16 全精度** | 评测结论更可信 |
+| 处方评测 | 14B 要量化，精度受损 | **Lingdan-14B-SFT bf16 全精度**（R1 档只有 8B 有权重） | 评测结论更可信 |
 | 推理范式 | 8B 级 | **HuatuoGPT-o1-70B q4** | 能跑但 4.5 tok/s，只适合离线批量 |
 
 **仍然不实用**：235B 级（Baichuan-M3）q4 就 132GB，加 KV cache 装不下；即便 FP4 硬塞也只有 ~1.3 tok/s。
@@ -594,8 +609,8 @@ Q3 要商用吗？
 | 你的目标 | 建议路线 | 备选 |
 |---|---|---|
 | **笔记本 / 单机跑一个中医模型** | Xinghe 1.2-9B（GGUF）→ 再小上 ZhongJing-1.5B/1.8B 或 Baize-0.6B | 追求论文可复现选 BianCang 7B / Lingdan-8B |
-| **有 DGX Spark，想跑满** | Lingdan-14B bf16（处方）+ ShizhenGPT-32B-VL（多模态）+ HuatuoGPT-3-27B（对照），见 3.8 | 8B 量化模型（浪费统一内存） |
-| **要辨证 / 开方推理质量** | Lingdan-14B-R1（处方 GRPO） | HuatuoGPT-o1-8B（推理范式） |
+| **有 DGX Spark，想跑满** | Lingdan-14B-SFT bf16 + ShizhenGPT-32B-VL（多模态）+ HuatuoGPT-3-27B（对照），见 3.8 | 8B 量化模型（浪费统一内存） |
+| **要辨证 / 开方推理质量** | Lingdan-8B-R1（处方 GRPO；14B-R1 权重尚未发布） | HuatuoGPT-o1-8B（推理范式） |
 | **做单科室 / 专科辨证开方** | 抄 [man_medical](https://github.com/johnson7788/man_medical) 的评测协议 | — |
 | **给 Agent 加中医能力，不想训模型** | `TCM.Skill`（通识底座）+ `nihaixia`（经方视角） | 温病补 `wujutong`，扶阳补 `likeskill` |
 | **做中医问诊对话产品** | MedChatZH（问诊数据 + 模型） | ShizhenGPT（要舌面脉多模态）+ RenShu-AI（多 Agent 编排） |
@@ -667,7 +682,7 @@ Q3 要商用吗？
    curl -s "$HF_ENDPOINT/api/models?search=TCM&limit=20&sort=downloads&direction=-1"
    ```
 
-3. **部分权重是 gated**（知方丹台、Lingdan 部分版本、ZhongJing-3、ShizhenGPT-32B），API 返回 401，需先在网页同意许可。
+3. **部分权重是 gated**（知方丹台、ZhongJing-3、ShizhenGPT-32B），API 返回 401，需先在网页同意许可。**注意 401 与 404 不是一回事**：401 是"要同意许可"，404 是"仓库不存在"。灵丹-V2 的 `Lingdan-14B-R1` 就属于后者 —— README Model Zoo 有链接、ModelScope 有占位页，但权重没上传（见 3.2 / 3.3.1），这种"链接存在但下不到"最容易让方案写空。
 
 4. **GitHub 搜索噪音大**：直接搜「中医」前 15 名基本被 funNLP / awesome-* 占据。用 `topic:tcm`、`中医 in:name,description` 收窄。
 5. **DGX Spark 的 CUDA 版本坑**：当前栈是 DGX OS 7.6.0 / 驱动 580 / **CUDA 13.0.3**，需 sm_121 支持。pip 直装的 torch / vLLM 常常没有对应轮子，**优先用 NGC 容器**；自己编 llama.cpp 要加 `-DCMAKE_CUDA_ARCHITECTURES=121`。另外 `nvidia-smi` 会显示 `Memory-Usage: Not Supported`（UMA 预期行为，不是故障），别写脚本依赖它。细节见 3.8。
@@ -830,8 +845,17 @@ for t in tcm traditional-chinese-medicine chinese-medicine; do
   | jq -r '.[] | "\(.createdAt[:10]) \(.id) dl=\(.downloads)"'
 done
 
-# 5. 判断权重是否 gated
-curl -s -o /dev/null -w "%{http_code}\n" "$HF_ENDPOINT/api/models/TCMLLM/Lingdan-14B-R1"   # 401 = gated
+# 5. 判断权重状态：401 = gated（要同意许可），404 = 仓库根本不存在
+curl -s -o /dev/null -w "%{http_code}\n" "$HF_ENDPOINT/api/models/tczzx6/ZhiFangDanTai1.0"          # 401
+curl -s -o /dev/null -w "%{http_code}\n" "$HF_ENDPOINT/api/models/TCMLLM/Lingdan-14B-R1"            # 404（README 有链接，权重未发布）
+
+# 6. 官方组织下实际发布了哪些 checkpoint（比 README 的 Model Zoo 表可信）
+curl -s "$HF_ENDPOINT/api/models?author=TCMLLM&limit=100" \
+| jq -r '.[].id'
+
+# 7. ModelScope 侧核对权重是否真的上传了（有仓库页 ≠ 有文件）
+curl -s -o /dev/null -w "%{http_code}\n" \
+  "https://modelscope.cn/api/v1/models/TCMAIBJTU/Lingdan-14B-R1/repo/files?Recursive=true"          # 404 = 无文件
 ```
 
 **用过的查询词**
@@ -871,7 +895,8 @@ curl -s -o /dev/null -w "%{http_code}\n" "$HF_ENDPOINT/api/models/TCMLLM/Lingdan
 | 2026-10-30 | ① 修复文档误存两份的问题；② 合并 HuggingFace 权重盘点（3.3）、2026 新模型（灵丹-V2、HuatuoGPT-3、man_medical 等）、评测基准（3.6）；③ 第 2 节重写为分层评价 + 流派地图 + 挑选标准；④ 全文重排：加目录、分层标准、五个判断、决策路径、避坑清单、术语表 |
 | 2026-11-01 | hf-mirror 补遗（tag 重扫）：新增 **3.3.1 中西医结合专项**，收 7 个可下载权重（medical-v5-8b、中药学 Qwen3-8B、Qwen3-4B 医疗微调、TraceMed、TCM-Qwen3.5-9B-SFT-R2、YIAN-4B、TCM-m3）；补灵丹-V2 官方 HF 链接/arXiv、Baize GGUF、MiMo HF；"真能下载权重"口径由 16 改为 20+；附录 A 增加 tag 过滤方法 |
 | 2026-11-04 | 新增 **10. 论文与范式（2026-11）**：回答「中医大模型是否与 Agent Skill 论文结合」——结论是两条平行线，最接近的是 TCM-SEA；收 8 条基本范式、8 类论文渠道与检索模板、24 篇 TCM + 15 篇 AI/Skill 论文清单、3 个可做的题 |
+| 2026-11-09 | 复核社区再次提名的 4 个 HF 模型（Issue #10）：`TCM-Qwen3.5-9B-SFT-R2` / `Lingdan-14B-SFT` / `MiMo-9B-TCM-Andrology-LoRA` / `chenhaodev/tcm-qwen3-8b-gguf` —— **3 个早已收录，信息准确无需改动**。真正的增量是发现 **`TCMLLM/Lingdan-14B-R1` 权重并未发布**（HF 404、ModelScope 文件树 404，此前记为"401 gated"），故新增 **3.3.2 复核小节**，并把 3.2 / 3.3.1 / 3.7 / 3.8 / 8.2 的处方首选由 `Lingdan-14B-R1` 改为**实际可下载的 `Lingdan-8B-R1`**；9.5 与附录 A 补「401 gated ≠ 404 不存在、以 ModelScope 文件树为准」的核对方法 |
 
 ---
 
-初版 2026-10-23 · 重构 2026-10-30 · 补遗 2026-11-01 · 论文范式 2026-11-04 CST*
+初版 2026-10-23 · 重构 2026-10-30 · 补遗 2026-11-01 · 论文范式 2026-11-04 · 复核 2026-11-09 CST*
