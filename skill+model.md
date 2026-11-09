@@ -194,7 +194,7 @@ cp -r nihaixia ~/.claude/skills/nihaixia/
 | 仲景 CMLM-ZhongJing | [pariskang/CMLM-ZhongJing](https://github.com/pariskang/CMLM-ZhongJing) | 533 | 福耀科技大学 / 2025 | A | 首个中医专用 LLM，专家知识引导微调，权重 ZhongjingGPT1-13B（gated）。另有 1.5B / 1.8B / 7B 小模型系列，端侧可跑 |
 | 神农 ShenNong | [michael-wzhu/ShenNong-TCM-LLM](https://github.com/michael-wzhu/ShenNong-TCM-LLM) | 513 | 华东师大 / 2023 | B+ | 首个中医药中文大模型，配套 ShenNong_TCM_Dataset。**价值在数据开源**，模型本身已过时 |
 | TCMLLM / 灵丹 v1 | [2020MEAI/TCMLLM](https://github.com/2020MEAI/TCMLLM) | 273 | 北交大 / 2024 | B | 中医药大模型 + 处方推荐，Lingdan-13B-Base。**已被 v2 取代**，只作历史引用 |
-| **灵丹-V2 Lingdan-V2** | [TCMAI-BJTU/Lingdan-V2](https://github.com/TCMAI-BJTU/Lingdan-V2) | 3 | 北交大 / 2026 | **S** | **当前最完整的开源中医训练管线**：Qwen3 4B/8B/14B × Base（CPT 16.62B token）/ SFT（773 万样本）/ **R1（处方 GRPO）**，Apache-2.0，有在线 demo [lingdan.chat](https://lingdan.chat/)、[HF 官方组织](https://huggingface.co/TCMLLM)、ModelScope 镜像与 [arXiv 2610.14705](https://arxiv.org/abs/2610.14705)。**星只有 3 个但质量最高** —— 本文档里 star 与质量反差最大的一条。<br>**⚠️ 2026-11-09 复核**：HF 实际可下载的是 **8 个** checkpoint（4B/8B 各 Base/SFT/R1 + 14B Base/SFT，全部 Apache-2.0 非 gated）；README Model Zoo 里列的 **`Lingdan-14B-R1` 权重并未发布**（HF API 404，ModelScope 也取不到文件树，只有 8B-R1 等 8 个有 safetensors）。所以论文里最强的那档（Overall 67.1 / 处方 F1 37.0）**现在拿不到**，实际可用的处方旗舰是 **8B-R1**（Overall 63.7 / 处方 F1 34.5，私有临床 Herb F1 50.7） |
+| **灵丹-V2 Lingdan-V2** | [TCMAI-BJTU/Lingdan-V2](https://github.com/TCMAI-BJTU/Lingdan-V2) | 3 | 北交大 / 2026 | **S** | **当前最完整的开源中医训练管线**：Qwen3 4B/8B/14B × Base（CPT 16.62B token）/ SFT（773 万样本）/ **R1（处方 GRPO）**，Apache-2.0，有在线 demo [lingdan.chat](https://lingdan.chat/)、[HF 官方组织](https://huggingface.co/TCMLLM)、ModelScope 镜像与 [arXiv 2610.14705](https://arxiv.org/abs/2610.14705)。**星只有 3 个但质量最高** —— 本文档里 star 与质量反差最大的一条。<br>**⚠️ 2026-11-09 复核**：HF 实际可下载的是 **8 个** checkpoint（4B/8B 各 Base/SFT/R1 + 14B Base/SFT，全部 Apache-2.0 非 gated）；README Model Zoo 里列的 **`Lingdan-14B-R1` 权重并未发布** —— `resolve/main/README.md` 与 `config.json` 都是 404（gated 会是 403，见 9.5），组织仓库列表里没有它，ModelScope 的文件树也返回 404 只有占位页。所以论文里最强的那档（Overall 67.1 / 处方 F1 37.0）**现在拿不到**，实际可用的处方旗舰是 **8B-R1**（Overall 63.7 / 处方 F1 34.5，私有临床 Herb F1 50.7） |
 | 黄帝 HuangDI | [Zlasejd/HuangDI](https://github.com/Zlasejd/HuangDI) | 163 | 2024 | C | 基于 Ziya-LLaMA-13B-V1 的中医古籍知识问答。底座已停更，只适合古籍问答对照 |
 | 时珍 ShizhenGPT | [FreedomIntelligence/ShizhenGPT](https://github.com/FreedomIntelligence/ShizhenGPT) | 154 | 港中深等 / 2025 | **A+** | **多模态四诊**（舌/脉/面/声），ShizhenGPT-7B-Omni，数据与权重都开源。**做四诊多模态的唯一现成起点**，另有 32B-VL 大号（gated） |
 | MedChatZH | [tyang816/MedChatZH](https://github.com/tyang816/MedChatZH) | 111 | 华东理工 / 2024 | A | 中西医**问诊对话**微调（Computers in Biology and Medicine 2024），开源问诊数据集。做问诊产品的现成数据源 |
@@ -209,7 +209,7 @@ cp -r nihaixia ~/.claude/skills/nihaixia/
 |---|:--:|---|:--:|---|---|
 | **杏核 Xinghe 1.2** | 2026 | 9B | A | 推理 + 古籍；**有 GGUF，普通笔记本可跑**（下载量最高的小模型之一） | [权重](https://huggingface.co/zsyjsld/Xinghe1.2-9B) · [GGUF](https://huggingface.co/zsyjsld/Xinghe1.2-9B-GGUF) · [数据](https://huggingface.co/datasets/zsyjsld/neijing-sft-v1.2) |
 | **白泽 Baize-TCM** | 2025 | Qwen3 0.6B / 8B | A | 中国中医科学院中药所，V1/V2/V3 各有 16bit / 4bit 版本，**语料库同步开源**（见 6.1）。**0.6B 是当前能跑的最小可用中医模型** | [权重](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model) · [V3-16bit](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model-V3-16bit) · [GGUF](https://huggingface.co/mradermacher/Baize-Traditional-Chinese-Medicine-Large-Language-Model-GGUF) |
-| **知方丹台 ZhiFangDanTai** | 2025 论文 / 2026 权重 | — | B+ | 首师大，RAG + 知识图谱；权重与数据 **gated**（API 401） | [论文](https://arxiv.org/abs/2509.05867) · [权重](https://huggingface.co/tczzx6/ZhiFangDanTai1.0) |
+| **知方丹台 ZhiFangDanTai** | 2025 论文 / 2026 权重 | — | B+ | 首师大，RAG + 知识图谱。**⚠️ 2026-11-09 复核：原权重链接已失效** —— `resolve/main/config.json` 与 `README.md` 都返回 404（不是 gated 的 403），`search=ZhiFangDanTai` 命中 0 条，作者 `tczzx6` 名下现在只有 `LLM-SAGE`。原先记的"gated / API 401"是误判，**现在当作"有论文无权重"看**（见 3.4） | [论文](https://arxiv.org/abs/2509.05867) · [原权重链接（已 404）](https://huggingface.co/tczzx6/ZhiFangDanTai1.0) |
 | **仲景小模型系列** | 2026 | 1.5B / 1.8B / 7B | A | 与 13B 同门，主打端侧/手机可跑 | HF `CMLM/Zhongjing-1-7b` · `CMLM/ZhongJing-2-1_8b` · `CMLL/ZhongJing-3-1_5b_V2`（+GGUF） |
 | **石真 32B** | 2025 | 32B-VL | A | ShizhenGPT 大号多模态版，**gated**；**Spark 上 bf16 可跑（64G）**，是多模态四诊的上限选择 | [权重](https://huggingface.co/FreedomIntelligence/ShizhenGPT-32B-VL) |
 | ChatTCM | 2025 | Qwen2-7B | B+ | 继续预训练权重，**适合自己接着训** | [权重](https://huggingface.co/SylvanL/ChatTCM-7B-Pretrain) |
@@ -241,7 +241,7 @@ cp -r nihaixia ~/.claude/skills/nihaixia/
 **判断**
 
 1. **"中西医兼通"不是标签，是训练配比**：本轮新增里，只有 `medical-v5-8b`（真实临床数据 + M2 蒸馏）、`ronan7878` 4B（80/20 配比）、`中药学 Qwen3-8B`（中西药联用专项）明确混合中西数据；`MedChatZH`（3.2 行）仍是最早的"中西医问诊"开源模型/数据，但底座停在 2024。其余新增一律是中医专用，不要在方案里写成"中西医结合"。
-2. **灵丹-V2 官方权重是这轮最大的增量**：`TCMLLM/Lingdan-{4B,8B,14B}-{Base,SFT,R1}`，**2026-11-09 复核：实际公开可下载 8 个**（4B/8B 全 6 个 + 14B Base/SFT），全部 Apache-2.0 且非 gated；**`Lingdan-14B-R1` 只有 README 链接没有权重**（HF API `Repository not found`，ModelScope 文件树同样 404，只剩占位页）—— 从"11-01 时是 401 gated"变成"404 不存在"，等发布之前别按它做选型。社区 GGUF 有 6 个（`mradermacher/` 下的 Lingdan-4B-Base / 4B-R1 / 8B-Base / 8B-R1 / 14B-Base / 14B-SFT-GGUF，下载量 479–807，比官方 safetensors 还高），SFT 缺 4B/8B、R1 同样缺 14B。Apache-2.0 + arXiv 2610.14705 + LingLan 榜。做新项目从 8B-R1 起，别再拿 2024 年的 Lingdan-13B。
+2. **灵丹-V2 官方权重是这轮最大的增量**：`TCMLLM/Lingdan-{4B,8B,14B}-{Base,SFT,R1}`，**2026-11-09 复核：实际公开可下载 8 个**（4B/8B 全 6 个 + 14B Base/SFT），全部 Apache-2.0 且非 gated；**`Lingdan-14B-R1` 只有 README 链接没有权重** —— `resolve/main/README.md` 直接 404（gated 应该是 403），组织仓库列表里没有它，ModelScope 文件树也 404。11-01 那轮记的"14B-R1 仍 401 gated"是错的，它从来没被上传过。社区 GGUF 有 6 个（`mradermacher/` 下的 Lingdan-4B-Base / 4B-R1 / 8B-Base / 8B-R1 / 14B-Base / 14B-SFT-GGUF，下载量 479–807，比官方 safetensors 还高），SFT 缺 4B/8B、R1 同样缺 14B。Apache-2.0 + arXiv 2610.14705 + LingLan 榜。做新项目从 8B-R1 起，别再拿 2024 年的 Lingdan-13B。
 3. **"能下载"≠"能信"**：TraceMed / TCM-Qwen3.5 未标许可，YIAN / MiMo 是 CC BY-NC，medical-v5 权重 Apache-2.0 但训练数据受 Baichuan-M2 条款限制，中药学 Qwen3 不随权重发布教材原文。商用前逐项核，别只看 license 字段。
 4. **本轮不采信的**：`NYCU-CGI-LLM/*-TCM-SD`、`Capmaomao/TCM_8B`、`ElonYi/Qwen2.5-7B-zhongyi`、`Huanghaonan88/*-ShangHanLun`、`wq528/tongue_vl_8B` 等要么无模型卡、要么只有 Unsloth 模板卡，没有训练/评测信息，只适合当"存在性"记录。
 5. **方法**：hf-mirror 的 `search=` 对中文关键词（中医/中西医/仲景）返回 0；按 tag 扫才全：`filter=tcm`（28）、`filter=traditional-chinese-medicine`（29）、`filter=chinese-medicine`（9）。检索时间 2026-11-01。
@@ -259,7 +259,9 @@ cp -r nihaixia ~/.claude/skills/nihaixia/
 
 **核对方法**（比上一轮多了一步）：除了 HF 的 `api/models/<id>`，还查了 `api/models?author=TCMLLM`（组织实际发布了什么）和 ModelScope 的 `repo/files?Recursive=true`（仓库页存在 ≠ 权重上传）。三者不一致时，**以文件树为准**。
 
-**这条更新为什么值得单独写**：`Lingdan-14B-R1` 是论文里打败 DeepSeek-R1 的那个 checkpoint，README、arXiv、Model Zoo 表都列着它，但 HF 返回 `Repository not found`、ModelScope 文件树 404。**任何按 14B-R1 写的方案现在都跑不起来**，改用 8B-R1（私有临床 Herb F1 50.7，与 14B-R1 的 52.8 差 2.1）或等权重发布。
+**这条更新为什么值得单独写**：`Lingdan-14B-R1` 是论文里打败 DeepSeek-R1 的那个 checkpoint，README、arXiv、Model Zoo 表都列着它，但 HF 的 `resolve/main/README.md` 直接 404、ModelScope 文件树也 404。**任何按 14B-R1 写的方案现在都跑不起来**，改用 8B-R1（私有临床 Herb F1 50.7，与 14B-R1 的 52.8 差 2.1）或等权重发布。
+
+**顺带查出来的第二个问题**：3.3 里标"权重与数据 gated（API 401）"的 **`tczzx6/ZhiFangDanTai1.0`（知方丹台）其实仓库已经不存在**（`README.md` 404、`search=ZhiFangDanTai` 命中 0 条、作者 `tczzx6` 名下只剩 `LLM-SAGE`），不是 gated。它已从"可选权重"退回 3.4 的"有论文无权重"。两处一起修，是因为**上一轮的 401/404 判据本身就不成立**（见 9.5）—— 判据错了，按它得出的每一条"gated"标注都需要重验。
 
 ### 3.4 有论文、**无公开权重**（看方向可以，别当底座）
 
@@ -272,6 +274,7 @@ cp -r nihaixia ~/.claude/skills/nihaixia/
 | **悬壶 XuanHuGPT** | 河北北方学院 / 2025 | C | ChatGLM2-6B + LoRA/P-Tuning v2，参数高效微调的常规做法 |
 | **TCM-R1** | 西南大学 / 2025 | B | GRPO 增强中医推理；同路线还有 **Ladder-base(GRPO-TCM)**（TCM-Ladder 团队） |
 | **Med-Shicheng 师承** | 南中医 / 2026 | B | Qwen2.5-1.5B，CPT+SFT+KTO 学 5 位名医经验，[代码开源](https://github.com/NJUCM-BJUCM-TCM-AI/Med-Shicheng) 权重未放 |
+| **知方丹台 ZhiFangDanTai** | 首师大 / 2025 论文 | B+ | RAG + 知识图谱（[arXiv 2509.05867](https://arxiv.org/abs/2509.05867)）。**原 HF 权重仓库已消失**（2026-11-09 复核 404，见 3.3），从"可选权重"退回"只能引论文" |
 | TCM-DS / GastroTCM / TCM-KLLaMA / RACE-Align / DoPI | 澳科大 / 清华+中日友好 / 浙工商 / 上科大 / 天大 | C | 分别是食疗推荐、消化内科 RAG、KG+方剂生成、1.7B 轻量对齐、主动问诊 |
 | **医院/厂商产品** | — | ⚠️ | 数智岐黄、大医金匮、天河·灵枢、仲思、广医·岐智、固生堂中医大脑、任度·素问、中医横琴 Hengqin-R1、华族本草、薪火中国药、伊尹、张仲景中医药大模型…**全部无公开权重**，只能引用新闻 |
 
@@ -682,7 +685,19 @@ Q3 要商用吗？
    curl -s "$HF_ENDPOINT/api/models?search=TCM&limit=20&sort=downloads&direction=-1"
    ```
 
-3. **部分权重是 gated**（知方丹台、ZhongJing-3、ShizhenGPT-32B），API 返回 401，需先在网页同意许可。**注意 401 与 404 不是一回事**：401 是"要同意许可"，404 是"仓库不存在"。灵丹-V2 的 `Lingdan-14B-R1` 就属于后者 —— README Model Zoo 有链接、ModelScope 有占位页，但权重没上传（见 3.2 / 3.3.1），这种"链接存在但下不到"最容易让方案写空。
+3. **分辨 gated 与"仓库不存在"，别信 `api/models` 的状态码**：镜像对 gated 的 `meta-llama/Llama-3.1-8B-Instruct` 返回 **200**，对已消失的 `tczzx6/ZhiFangDanTai1.0` 返回 **404**，而对任何仓库都会随机吐 429 —— 单看这个接口分不出"gated"和"没了"。两条可靠判据：
+
+   ```bash
+   # 判据一：下载仓库里的文件。README.md 404 = 仓库不存在；config.json 403 = gated；302/307/200 = 可下载
+   curl -s -o /dev/null -w '%{http_code}\n' -L "$HF_ENDPOINT/<owner>/<repo>/resolve/main/README.md"
+   curl -s -o /dev/null -w '%{http_code}\n' -L "$HF_ENDPOINT/<owner>/<repo>/resolve/main/config.json"
+
+   # 判据二：列组织下的仓库。gated 仓库照常出现在列表里（meta-llama 实测如此），
+   #         所以"列表里没有"就是真没发布，比 README 的 Model Zoo 表可信
+   curl -s "$HF_ENDPOINT/api/models?author=TCMLLM&limit=100" | jq -r '.[].id'
+   ```
+
+   实测对照（2026-11-09）：`CMLM/ZhongjingGPT1_13B` → cfg 403 = gated（与本文档一致）；`meta-llama/Llama-3.1-8B-Instruct` → cfg 403 = gated；`TCMLLM/Lingdan-14B-SFT` → 302/307 = 可下载；`TCMLLM/Lingdan-14B-R1` → **README 404 = 权重从未发布**（见 3.2）。按同一判据，原先标"gated / API 401"的 **`tczzx6/ZhiFangDanTai1.0` 也是 404**（`search=ZhiFangDanTai` 命中 0 条、作者名下只剩 `LLM-SAGE`），仓库已失效，见 3.3 / 3.4。
 
 4. **GitHub 搜索噪音大**：直接搜「中医」前 15 名基本被 funNLP / awesome-* 占据。用 `topic:tcm`、`中医 in:name,description` 收窄。
 5. **DGX Spark 的 CUDA 版本坑**：当前栈是 DGX OS 7.6.0 / 驱动 580 / **CUDA 13.0.3**，需 sm_121 支持。pip 直装的 torch / vLLM 常常没有对应轮子，**优先用 NGC 容器**；自己编 llama.cpp 要加 `-DCMAKE_CUDA_ARCHITECTURES=121`。另外 `nvidia-smi` 会显示 `Memory-Usage: Not Supported`（UMA 预期行为，不是故障），别写脚本依赖它。细节见 3.8。
@@ -845,13 +860,20 @@ for t in tcm traditional-chinese-medicine chinese-medicine; do
   | jq -r '.[] | "\(.createdAt[:10]) \(.id) dl=\(.downloads)"'
 done
 
-# 5. 判断权重状态：401 = gated（要同意许可），404 = 仓库根本不存在
-curl -s -o /dev/null -w "%{http_code}\n" "$HF_ENDPOINT/api/models/tczzx6/ZhiFangDanTai1.0"          # 401
-curl -s -o /dev/null -w "%{http_code}\n" "$HF_ENDPOINT/api/models/TCMLLM/Lingdan-14B-R1"            # 404（README 有链接，权重未发布）
+# 5. 判断权重到底能不能下（别只看 api/models，镜像会随机 429/525，且把 gated 与不存在都报成 401/404）
+#    判据：README.md 404 = 仓库不存在；config.json 403 = gated（要网页同意许可）；302/307/200 = 可下载
+for p in TCMLLM/Lingdan-14B-SFT CMLM/ZhongjingGPT1_13B TCMLLM/Lingdan-14B-R1; do
+  printf "%-32s readme=%s cfg=%s\n" "$p" \
+    "$(curl -s -o /dev/null -w '%{http_code}' -L "$HF_ENDPOINT/$p/resolve/main/README.md")" \
+    "$(curl -s -o /dev/null -w '%{http_code}' -L "$HF_ENDPOINT/$p/resolve/main/config.json")"
+  sleep 3   # 镜像限流很凶，连续请求务必留间隔
+done
+# 实测（2026-11-09）：14B-SFT → 可下载；ZhongjingGPT1_13B → 403 gated；14B-R1 → README 404 仓库不存在
+# 注意 GGUF 仓库本身没有 config.json，只查 config.json 会误判成"不存在"，一定先看 README.md
 
-# 6. 官方组织下实际发布了哪些 checkpoint（比 README 的 Model Zoo 表可信）
-curl -s "$HF_ENDPOINT/api/models?author=TCMLLM&limit=100" \
-| jq -r '.[].id'
+# 6. 官方组织下实际发布了哪些 checkpoint（比 README 的 Model Zoo 表可信；gated 仓库照常出现在列表里，
+#    所以"列表里没有"就是真没发布 —— Lingdan-14B-R1 就是这样暴露的）
+curl -s "$HF_ENDPOINT/api/models?author=TCMLLM&limit=100" | jq -r '.[].id'
 
 # 7. ModelScope 侧核对权重是否真的上传了（有仓库页 ≠ 有文件）
 curl -s -o /dev/null -w "%{http_code}\n" \
@@ -895,7 +917,7 @@ curl -s -o /dev/null -w "%{http_code}\n" \
 | 2026-10-30 | ① 修复文档误存两份的问题；② 合并 HuggingFace 权重盘点（3.3）、2026 新模型（灵丹-V2、HuatuoGPT-3、man_medical 等）、评测基准（3.6）；③ 第 2 节重写为分层评价 + 流派地图 + 挑选标准；④ 全文重排：加目录、分层标准、五个判断、决策路径、避坑清单、术语表 |
 | 2026-11-01 | hf-mirror 补遗（tag 重扫）：新增 **3.3.1 中西医结合专项**，收 7 个可下载权重（medical-v5-8b、中药学 Qwen3-8B、Qwen3-4B 医疗微调、TraceMed、TCM-Qwen3.5-9B-SFT-R2、YIAN-4B、TCM-m3）；补灵丹-V2 官方 HF 链接/arXiv、Baize GGUF、MiMo HF；"真能下载权重"口径由 16 改为 20+；附录 A 增加 tag 过滤方法 |
 | 2026-11-04 | 新增 **10. 论文与范式（2026-11）**：回答「中医大模型是否与 Agent Skill 论文结合」——结论是两条平行线，最接近的是 TCM-SEA；收 8 条基本范式、8 类论文渠道与检索模板、24 篇 TCM + 15 篇 AI/Skill 论文清单、3 个可做的题 |
-| 2026-11-09 | 复核社区再次提名的 4 个 HF 模型（Issue #10）：`TCM-Qwen3.5-9B-SFT-R2` / `Lingdan-14B-SFT` / `MiMo-9B-TCM-Andrology-LoRA` / `chenhaodev/tcm-qwen3-8b-gguf` —— **3 个早已收录，信息准确无需改动**。真正的增量是发现 **`TCMLLM/Lingdan-14B-R1` 权重并未发布**（HF 404、ModelScope 文件树 404，此前记为"401 gated"），故新增 **3.3.2 复核小节**，并把 3.2 / 3.3.1 / 3.7 / 3.8 / 8.2 的处方首选由 `Lingdan-14B-R1` 改为**实际可下载的 `Lingdan-8B-R1`**；9.5 与附录 A 补「401 gated ≠ 404 不存在、以 ModelScope 文件树为准」的核对方法 |
+| 2026-11-09 | 复核社区再次提名的 4 个 HF 模型（Issue #10）：`TCM-Qwen3.5-9B-SFT-R2` / `Lingdan-14B-SFT` / `MiMo-9B-TCM-Andrology-LoRA` / `chenhaodev/tcm-qwen3-8b-gguf` —— **3 个早已收录，信息准确无需改动**。真正的增量是两处**旧事实错误**：① **`TCMLLM/Lingdan-14B-R1` 权重从未发布**（此前记为"401 gated"），故新增 **3.3.2 复核小节**，并把 3.2 / 3.3.1 / 3.7 / 3.8 / 8.2 的处方首选改为**实际可下载的 `Lingdan-8B-R1`**、Spark 组合改用 `Lingdan-14B-SFT` bf16；② **`tczzx6/ZhiFangDanTai1.0`（知方丹台）仓库已消失**（此前也记为"401 gated"），从 3.3 移入 3.4。**根因是上一轮的"API 401 = gated"判据不成立**：镜像会把 gated 和不存在都报成 401/404，还会随机 429。本轮改用**下载 `resolve/main/README.md` + `config.json` 的组合判据**（403 = gated、404 = 不存在、302/200 = 可下载），并用 `api/models?author=` 与 ModelScope 文件树交叉验证；判据与实测对照写进 9.5 与附录 A |
 
 ---
 
