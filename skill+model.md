@@ -222,7 +222,7 @@ cp -r nihaixia ~/.claude/skills/nihaixia/
 | DeepSeek-R1-Distill-Qwen-7B-TCM | 2025 | 7B | C | R1 蒸馏 + 中医 SFT，推理链路；有 GGUF。**社区实验性微调** | HF `jasonXT/DeepSeek-R1-Qwen-7B-TCM` |
 | 神农权重 | 2023 | 7B | B | 首个中医药中文大模型 | [HF](https://huggingface.co/michaelwzhu/ShenNong-TCM-LLM) · [数据集](https://huggingface.co/datasets/michaelwzhu/ShenNong_TCM_Dataset) |
 
-> **口径提示**：Awesome-TCM-LLM 统计「真能下载复现的中医权重约 16 个」（2026-10 快照）；2026-11-01 按 tag 重扫 hf-mirror 又补了 7 个可直接下载的权重，见 3.3.1。其余多为 gated、LoRA 片段或社区实验性微调。
+> **口径提示**：Awesome-TCM-LLM 统计「真能下载复现的中医权重约 16 个」（2026-10 快照）；2026-11-01 按 tag 重扫 hf-mirror 又补了 7 个可直接下载的权重，见 3.3.1。2026-11-09 复核把已失效的知方丹台移出可下载口径（净 -1，仍是 20+），并确认灵丹-V2 实际发布 8 个而非 9 个。其余多为 gated、LoRA 片段或社区实验性微调。
 
 ### 3.3.1 2026-11-01 hf-mirror 补遗：中西医结合专项
 
